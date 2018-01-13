@@ -36,26 +36,24 @@ function MyPromise(executor) {
     this.onFulfilledCallbacks = [];
     this.onRejectedCallbacks = [];
     function resolve(value) {
-        if (value instanceof MyPromise) {
-            return value.then(resolve, reject);
-        }
-        setTimeout(function () {
+            if (value instanceof MyPromise) {
+                return value.then(resolve, reject);
+            }
             if (self.status === 'pending') {
                 self.value = value;
                 self.status = 'fulfilled';
                 self.onFulfilledCallbacks.forEach(item => item(value));
             }
-        });
-    }
-    function reject(reason) {
-        setTimeout(function () {
+        }
+    
+        function reject(reason) {
             if (self.status === 'pending') {
                 self.reason = reason;
                 self.status = 'rejected';
                 self.onRejectedCallbacks.forEach(item => item(reason));
             }
-        });
-    }
+        }
+
     try {
         executor(resolve, reject);
     } catch (e) {

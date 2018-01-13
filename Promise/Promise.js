@@ -28,23 +28,19 @@ function MyPromise(executor) {
         if (value instanceof MyPromise) {
             return value.then(resolve, reject);
         }
-        setTimeout(function () {
-            if (self.status === 'pending') {
-                self.value = value;
-                self.status = 'fulfilled';
-                self.onFulfilledCallbacks.forEach(item => item(value));
-            }
-        });
+        if (self.status === 'pending') {
+            self.value = value;
+            self.status = 'fulfilled';
+            self.onFulfilledCallbacks.forEach(item => item(value));
+        }
     }
 
     function reject(reason) {
-        setTimeout(function () {
-            if (self.status === 'pending') {
-                self.reason = reason;
-                self.status = 'rejected';
-                self.onRejectedCallbacks.forEach(item => item(reason));
-            }
-        });
+        if (self.status === 'pending') {
+            self.reason = reason;
+            self.status = 'rejected';
+            self.onRejectedCallbacks.forEach(item => item(reason));
+        }
     }
 
     try {
@@ -155,6 +151,7 @@ function resolutionPromise(promise, x, resolve, reject) {
         resolve(x);
     }
 }
+
 MyPromise.resolve = function (value) {
     if (value instanceof MyPromise) {
         return value;
