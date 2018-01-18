@@ -1,6 +1,7 @@
 # javascript异步的发展
 >需求：有三个api，已知第一个api的地址 "1"，从第一个api里获取第二个api的地址，从第二个api里获取第三个api的地址。
 用fs模块模拟请求api。
+
 #####api的数据结构
 ``` javascript
 {
