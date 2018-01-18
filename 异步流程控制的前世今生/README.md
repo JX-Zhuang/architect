@@ -2,7 +2,7 @@
 >需求：有三个api，已知第一个api的地址 "1"，从第一个api里获取第二个api的地址，从第二个api里获取第三个api的地址。
 用fs模块模拟请求api。
 
-#####api的数据结构
+##### api的数据结构
 ``` javascript
 {
   "msg":"This is x", //message
@@ -11,7 +11,7 @@
   }
 }
 ```
-###回调函数
+### 回调函数
 * 传统方式，符合传统js编程
 * 可读性差
 * 容易形成回调地狱
@@ -37,7 +37,7 @@ getApi('1',(api)=>{
     })
 });
 ```
-###事件订阅
+### 事件订阅
 * 发布订阅模式，每次请求订阅事件，得到数据后，发布事件
 * 如果请求api很多，要订阅很多事件
 * 代码融于，不方便维护
@@ -87,7 +87,7 @@ event.on('api3',function (api) {
 event.emit('api1');
 ```
 
-###Promise
+### Promise
 * 链式调用，代码易读
 ```javascript
 let fs = require('fs');
@@ -115,7 +115,7 @@ getApi(1).then(function (data) {
 });
 ```
 
-###Generator
+### Generator
 * 执行next(),返回对象，key分别是value，done。value是yield 语句后面的内容，done表示是否还有next可以执行
 * 以 let api2 = yield getApi(api1) 为例api2是next传入的参数。
 * 个人感觉不如promise好用。。。（欢迎来喷，交流学习）
@@ -156,7 +156,7 @@ api1.value.then(function (data) {
     console.log(data.msg);
 });
 ```
-###async
+### async
 * Generator的语法糖，比Generator易读、容易理解
 * 代码同步写，同步执行
 ```javascript
