@@ -35,6 +35,7 @@ OSI（Open System Interconnection Reference Model）模型是一个试图将计�
 * 链路层用来处理连接网络的硬件部分，主要目的是为IP模块发送和接收IP数据报，为ARP发送ARP请求和接收ARP应答，为RARP发送RARP请求和接收RARP应答。
 * ARP：地址解析协议
 * RARP：逆地址解析协议
+
 ![图片](./level.png)  
 #### HTTP
 HTTP（Hypertext Transfer Protocol）超文本传输协议。HTTP协议用于客户端和服务器端之间的通信。HTTP是应用层的协议，它是在TCP协议的基础上加上了请求行、请求首部。
