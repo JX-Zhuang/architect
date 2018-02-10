@@ -1,3 +1,5 @@
+# OSI-TCP/IP协议族
+> 学习OSI-TCP/IP协议族笔记
 #### OSI参考模型
 OSI（Open System Interconnection Reference Model）模型是一个试图将计算机在世界范围内互联为网络的标准框架。从上倒下依次是：应用层、表示层、会话层、传输层、网络层、数据链路层、物理层。
 * 应用层：应用层是最接近用户的一层，计算机用户可以通过应用层访问其他的软件，为用户提供常见的网络应用服务。例如：http、https、FTP、TELNET、SSH等。
