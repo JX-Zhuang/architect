@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <!--<link rel="stylesheet" href="./index.css">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+        h1{
+            font-size: 18px;
+        }
+        div {
+            width: 70%;
+            margin: 10px auto;
+        }
+        ul{
+            padding-left: 5px;
+        }
+        li {
+            list-style: none;
+            padding: 30px 10px 5px;
+            border-bottom: 1px solid #ccc;
+            line-height: 17px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #000;
+        }
+
+        a:hover {
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <h1>
+        {{title}}
+    </h1>
+    <ul>
+        {{#each list}}
+        <li>
+            <a href="{{url}}">{{name}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+</body>
+</html>
