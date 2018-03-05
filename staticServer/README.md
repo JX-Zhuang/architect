@@ -100,28 +100,19 @@ errorListener(err) {
 * 如果是图片，先设置防盗链，返回文件。
 ````javascript
 async requestListener(req, res) {
-    this.req = req;
-    this.res = res;
-    this.url = req.url;
-    this.dir = path.join(this.root, this.url);  
-    console.log(this.dir);
+    const pathname = url.parse(req.url).pathname;
+    const dir = path.join(this.root, pathname);
     try {
-        let contentType = mime.getType(this.dir);
-        if(contentType.match('text')){
-            contentType+=';charset=utf-8';
+        let contentType = mime.getType(dir);
+        if (contentType&&contentType.match('text')) {
+            contentType += ';charset=utf-8';
         }
-        this.res.setHeader('Content-Type', contentType);
-        this.stat = await fsStat(this.dir);
-        if (this.stat.isDirectory()) {
-            this.getDir();
+        res.setHeader('Content-Type', contentType);
+        const stat = await fsStat(dir);
+        if (stat.isDirectory()) {
+            this.getDir(req,res,pathname,dir);
         } else {
-            if(mime.getType(this.dir).match('image')){
-            //图片
-                if(!this.sendForbidden()){
-                    return;
-                }
-            }
-            this.proxyGetFile();
+            this.proxyGetFile(req,res,pathname,dir,stat);
         }
     } catch (e) {
         res.statusCode = 404;
@@ -134,25 +125,25 @@ async requestListener(req, res) {
 * 循环目录下的文件名，得到一个数组，每个元素是一个对象，名字和url。
 * 返回模板
 ```javascript
-async getDir() {
-     const dirs = await fsReaddir(this.dir);
-     const list = dirs.map(dir => ({name: dir, url: path.join(this.url, dir)}));
-     const html = template({
-         title: this.dir,
-         list
-     });
-     this.res.end(html);
+async getDir(req,res,pathname,dir) {
+    const dirs = await fsReaddir(dir);
+    const list = dirs.map(dir => ({name: dir, url: path.join(pathname, dir)}));
+    const html = template({
+        title: dir,
+        list
+    });
+    res.end(html);
 }
 ```
 #### 防盗链
 * 如果是当前服务器访问的就返回该图片，如果是其他服务器访问，返回空白图片
 ```javascript
-sendForbidden() {
-    this.referer = this.req.headers['referer'] || this.req.headers['refer'];
-    if (this.referer && url.parse(this.referer).host !== this.req.headers['host']) {
+sendForbidden(req,res,pathname,dir,stat) {
+    const referer = req.headers['referer'] || req.headers['refer'];
+    if (referer && url.parse(referer).host !== req.headers['host']) {
         console.log('防盗链');
-        this.res.statusCode = 403;
-        fs.createReadStream(path.join(__dirname,'forbidden.png')).pipe(this.res);
+        res.statusCode = 403;
+        fs.createReadStream(path.join(__dirname, 'forbidden.png')).pipe(res);
         return false;
     }
     return true;
@@ -161,47 +152,54 @@ sendForbidden() {
 #### 读取文件
 * 设置缓存，该类有getFileCacheControl、getFileExpires、getFileLastModified、getFileETag方法
 ```javascript
-proxyGetFile() {
+proxyGetFile(req,res,pathname,dir,stat) {
+    if (mime.getType(dir).match('image')) {
+        //图片
+        if (!this.sendForbidden(req,res,pathname,dir,stat)) {
+            return;
+        }
+    }
     for (let i = 0; i < this.cacheType.length; i++) {
-        if (this[`getFile${this.cacheType[i]}`]()) {
+        if (this[`getFile${this.cacheType[i]}`](req,res,pathname,dir,stat)) {
             console.log(this.cacheType[i]);
             return;
         }
     }
-    this.getFile();
+    this.getFile(req,res,pathname,dir,stat);
 }
 ```
 #### 强制缓存
 * 通过设置响应头Expires和Cache-Control来实现强制缓存
 ```javascript
-getFileExpires() {
-    this.res.setHeader('Expires', new Date(Date.now() + 60 * 1000));
+getFileExpires(req,res,pathname,dir,stat) {
+    res.setHeader('Expires', new Date(Date.now() + 60 * 1000));
 }
 
-getFileCacheControl() {
-    this.res.setHeader('Cache-Control', 'max-age=60');
-}   
+getFileCacheControl(req,res,pathname,dir,stat) {
+    res.setHeader('Cache-Control', 'max-age=60');
+}  
 ```
 #### 协商缓存
 * 设置响应头的Last-Modified为文件修改时间，如果请求头的If-Modified-Since和文件修改时间一样，设置Status Code为304，让客户端从缓存里获取数据。
 * 设置响应头的ETag为文件修改时间的md5值，如果请求头的If-None-Match和md5值一样，设置Status Code为304，让客户端从缓存里获取数据。
 ```javascript
-getFileLastModified() {
-    this.res.setHeader('Last-Modified', this.stat.ctime.toGMTString());
-    if (this.req.headers['if-modified-since'] === this.stat.ctime.toGMTString()) {
-        this.res.statusCode = 304;
-        this.res.end();
+getFileLastModified(req,res,pathname,dir,stat) {
+    const lastModified = stat.ctime.toGMTString();
+    res.setHeader('Last-Modified', lastModified);
+    if (req.headers['if-modified-since'] === lastModified) {
+        res.statusCode = 304;
+        res.end();
         return true;
     }
 }
 
-getFileETag() {
-    let ifNoneMatch = this.req.headers['if-none-match'];
-    let etag = crypto.createHash('md5').update(this.stat.ctime.toGMTString(), 'utf8').digest('hex');
-    this.res.setHeader('ETag', etag);
+getFileETag(req,res,pathname,dir,stat) {
+    let ifNoneMatch = req.headers['if-none-match'];
+    let etag = crypto.createHash('md5').update(stat.ctime.toGMTString(), 'utf8').digest('hex');
+    res.setHeader('ETag', etag);
     if (ifNoneMatch == etag) {
-        this.res.statusCode = 304;
-        this.res.end();
+        res.statusCode = 304;
+        res.end();
         return true;
     }
 }
@@ -209,28 +207,37 @@ getFileETag() {
 #### 压缩
 * 根据请求头Accept-Encoding，返回不同的压缩格式
 ```javascript
-compressFile(inp) {
-    const acceptEncodings = this.req.headers['accept-encoding'];
+compressFile(req,res,inp) {
+    const acceptEncodings = req.headers['accept-encoding'];
     if(/\bgzip\b/.test(acceptEncodings)){
-        this.gzipFile(inp);
+        this.gzipFile(req,res,inp);
         return true;
     }else if(/\bdeflate\b/.test(acceptEncodings)){
-        this.deflateFile(inp);
+        this.deflateFile(req,res,inp);
         return true;
     }
     return false;
 }
 
-gzipFile(inp) {
+gzipFile(req,res,inp) {
     const gzip = zlib.createGzip();
-    this.res.setHeader('Content-Encoding','gzip');
-    inp.pipe(gzip).pipe(this.res);
+    res.setHeader('Content-Encoding','gzip');
+    inp.pipe(gzip).pipe(res);
 }
 
-deflateFile(inp) {
+deflateFile(req,res,inp) {
     const deflate = zlib.createDeflate();
-    this.res.setHeader('Content-Encoding','deflate');
-    inp.pipe(deflate).pipe(this.res);
+    res.setHeader('Content-Encoding','deflate');
+    inp.pipe(deflate).pipe(res);
+}
+```
+#### 读取文件
+* 先进行压缩
+```javascript
+getFile(req,res,pathname,dir,stat) {
+    const fsReadStream = fs.createReadStream(dir);
+    if(!this.compressFile(req,res,fsReadStream))
+        fsReadStream.pipe(res);
 }
 ```
 ##### 总结

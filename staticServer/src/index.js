@@ -45,28 +45,19 @@ class StaticServer {
     }
 
     async requestListener(req, res) {
-        this.req = req;
-        this.res = res;
-        this.url = req.url;
-        this.dir = path.join(this.root, this.url);
-        console.log(this.dir);
+        const pathname = url.parse(req.url).pathname;
+        const dir = path.join(this.root, pathname);
         try {
-            let contentType = mime.getType(this.dir);
-            if (contentType.match('text')) {
+            let contentType = mime.getType(dir);
+            if (contentType&&contentType.match('text')) {
                 contentType += ';charset=utf-8';
             }
-            this.res.setHeader('Content-Type', contentType);
-            this.stat = await fsStat(this.dir);
-            if (this.stat.isDirectory()) {
-                this.getDir();
+            res.setHeader('Content-Type', contentType);
+            const stat = await fsStat(dir);
+            if (stat.isDirectory()) {
+                this.getDir(req,res,pathname,dir);
             } else {
-                if (mime.getType(this.dir).match('image')) {
-                    //图片
-                    if (!this.sendForbidden()) {
-                        return;
-                    }
-                }
-                this.proxyGetFile();
+                this.proxyGetFile(req,res,pathname,dir,stat);
             }
         } catch (e) {
             res.statusCode = 404;
@@ -75,90 +66,96 @@ class StaticServer {
         }
     }
 
-    proxyGetFile() {
+    proxyGetFile(req,res,pathname,dir,stat) {
+        if (mime.getType(dir).match('image')) {
+            //图片
+            if (!this.sendForbidden(req,res,pathname,dir,stat)) {
+                return;
+            }
+        }
         for (let i = 0; i < this.cacheType.length; i++) {
-            if (this[`getFile${this.cacheType[i]}`]()) {
+            if (this[`getFile${this.cacheType[i]}`](req,res,pathname,dir,stat)) {
                 console.log(this.cacheType[i]);
                 return;
             }
         }
-        this.getFile();
+        this.getFile(req,res,pathname,dir,stat);
     }
 
-    getFileLastModified() {
-        this.res.setHeader('Last-Modified', this.stat.ctime.toGMTString());
-        if (this.req.headers['if-modified-since'] === this.stat.ctime.toGMTString()) {
-            this.res.statusCode = 304;
-            this.res.end();
+    getFileLastModified(req,res,pathname,dir,stat) {
+        const lastModified = stat.ctime.toGMTString();
+        res.setHeader('Last-Modified', lastModified);
+        if (req.headers['if-modified-since'] === lastModified) {
+            res.statusCode = 304;
+            res.end();
             return true;
         }
     }
 
-    getFileETag() {
-        let ifNoneMatch = this.req.headers['if-none-match'];
-        let etag = crypto.createHash('md5').update(this.stat.ctime.toGMTString(), 'utf8').digest('hex');
-        this.res.setHeader('ETag', etag);
+    getFileETag(req,res,pathname,dir,stat) {
+        let ifNoneMatch = req.headers['if-none-match'];
+        let etag = crypto.createHash('md5').update(stat.ctime.toGMTString(), 'utf8').digest('hex');
+        res.setHeader('ETag', etag);
         if (ifNoneMatch == etag) {
-            this.res.statusCode = 304;
-            this.res.end();
+            res.statusCode = 304;
+            res.end();
             return true;
         }
     }
 
-    getFileExpires() {
-        this.res.setHeader('Expires', new Date(Date.now() + 60 * 1000));
+    getFileExpires(req,res,pathname,dir,stat) {
+        res.setHeader('Expires', new Date(Date.now() + 60 * 1000));
     }
 
-    getFileCacheControl() {
-        this.res.setHeader('Cache-Control', 'max-age=60');
+    getFileCacheControl(req,res,pathname,dir,stat) {
+        res.setHeader('Cache-Control', 'max-age=60');
     }
 
-    compressFile(inp) {
-        const acceptEncodings = this.req.headers['accept-encoding'];
+    compressFile(req,res,inp) {
+        const acceptEncodings = req.headers['accept-encoding'];
         if(/\bgzip\b/.test(acceptEncodings)){
-            this.gzipFile(inp);
+            this.gzipFile(req,res,inp);
             return true;
         }else if(/\bdeflate\b/.test(acceptEncodings)){
-            this.deflateFile(inp);
+            this.deflateFile(req,res,inp);
             return true;
         }
         return false;
     }
 
-    gzipFile(inp) {
+    gzipFile(req,res,inp) {
         const gzip = zlib.createGzip();
-        this.res.setHeader('Content-Encoding','gzip');
-        inp.pipe(gzip).pipe(this.res);
+        res.setHeader('Content-Encoding','gzip');
+        inp.pipe(gzip).pipe(res);
     }
 
-    deflateFile(inp) {
+    deflateFile(req,res,inp) {
         const deflate = zlib.createDeflate();
-        this.res.setHeader('Content-Encoding','deflate');
-        inp.pipe(deflate).pipe(this.res);
+        res.setHeader('Content-Encoding','deflate');
+        inp.pipe(deflate).pipe(res);
     }
 
-    async getFile() {
-        const fsReadStream = fs.createReadStream(this.dir);
-        if(!this.compressFile(fsReadStream))
-            fsReadStream.pipe(this.res);
+    getFile(req,res,pathname,dir,stat) {
+        const fsReadStream = fs.createReadStream(dir);
+        if(!this.compressFile(req,res,fsReadStream))
+            fsReadStream.pipe(res);
     }
-
-    async getDir() {
-        const dirs = await fsReaddir(this.dir);
-        const list = dirs.map(dir => ({name: dir, url: path.join(this.url, dir)}));
+    async getDir(req,res,pathname,dir) {
+        const dirs = await fsReaddir(dir);
+        const list = dirs.map(dir => ({name: dir, url: path.join(pathname, dir)}));
         const html = template({
-            title: this.dir,
+            title: dir,
             list
         });
-        this.res.end(html);
+        res.end(html);
     }
 
-    sendForbidden() {
-        this.referer = this.req.headers['referer'] || this.req.headers['refer'];
-        if (this.referer && url.parse(this.referer).host !== this.req.headers['host']) {
+    sendForbidden(req,res,pathname,dir,stat) {
+        const referer = req.headers['referer'] || req.headers['refer'];
+        if (referer && url.parse(referer).host !== req.headers['host']) {
             console.log('防盗链');
-            this.res.statusCode = 403;
-            fs.createReadStream(path.join(__dirname, 'forbidden.png')).pipe(this.res);
+            res.statusCode = 403;
+            fs.createReadStream(path.join(__dirname, 'forbidden.png')).pipe(res);
             return false;
         }
         return true;
