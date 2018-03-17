@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0478cf6-5731-4f4e-9b73-0ffab524d97a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticServer/README.md" afterPath="$PROJECT_DIR$/staticServer/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticServer/public/index.html" afterPath="$PROJECT_DIR$/staticServer/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticServer/src/index.js" afterPath="$PROJECT_DIR$/staticServer/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,12 +18,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/staticServer/README.md">
+        <entry file="file://$PROJECT_DIR$/express/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="401">
-                <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-                <folding />
+              <first_editor relative-caret-position="486">
+                <caret line="175" column="38" lean-forward="false" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
+                <folding>
+                  <marker date="1521302296000" expanded="true" signature="958:1001" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="1024:1060" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="1157:1275" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="1196:1233" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="1490:1651" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="1504:1649" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="2017:2179" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="2080:2082" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="2417:2509" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="3461:3623" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="3524:3526" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="3661:3926" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="3731:3905" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="4001:4134" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="4044:4132" ph="[...]" />
+                  <marker date="1521302296000" expanded="true" signature="4059:4126" ph="{&quot;handle&quot;: 用户代码...}" />
+                  <marker date="1521302296000" expanded="true" signature="4357:4359" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="4527:4565" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="4589:4647" ph="{...}" />
+                  <marker date="1521302296000" expanded="true" signature="4734:4776" ph="{...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -33,31 +52,32 @@
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/staticServer/src/index.js">
+        <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="141" column="5" lean-forward="true" selection-start-line="137" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="151">
+              <caret line="497" column="30" lean-forward="false" selection-start-line="497" selection-start-column="25" selection-end-line="497" selection-end-column="30" />
+              <folding>
+                <element signature="e#1318#2452#0" expanded="false" />
+                <element signature="e#2493#3283#0" expanded="false" />
+                <element signature="e#9260#9632#0" expanded="false" />
+                <element signature="e#9649#10178#0" expanded="false" />
+                <element signature="n#!!block;n#appendMethods#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/staticServer/public/index.html">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="www.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/staticServer/bin/www.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="151">
+              <caret line="115" column="29" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!block;n#Route#0" expanded="false" />
+                <element signature="e#958#1157#0" expanded="false" />
+                <element signature="e#1270#1557#0" expanded="false" />
+                <element signature="e#3046#3518#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,44 +88,44 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>writable</find>
-      <find>onwrite</find>
-      <find>networkInterfaces</find>
-      <find>getInterfaceAddresses</find>
-      <find>f</find>
-      <find>fo</find>
-      <find>this.server</find>
-      <find>URL</find>
-      <find>setHeaders</find>
-      <find>compre</find>
-      <find>comm</find>
-      <find>on</find>
-      <find>compres</find>
-      <find>this.url</find>
-      <find>console</find>
-      <find>referer</find>
-      <find>url.parse</find>
-      <find>url</find>
-      <find>parse</find>
-      <find>match</find>
-      <find>setHeader</find>
-      <find>headers</find>
-      <find>requestListener</find>
-      <find>getDir</find>
-      <find>sendForbidden</find>
-      <find>proxyGetFile</find>
-      <find>getFileExpires</find>
-      <find>getFileLastModified</find>
-      <find>compressFile</find>
-      <find>getFile</find>
+      <find>dispat</find>
+      <find>middleware</find>
+      <find>proto.route</find>
+      <find>static</find>
+      <find>view engine</find>
+      <find>set</find>
+      <find>render</find>
+      <find>app.set</find>
+      <find>app.engine</find>
+      <find>app[</find>
+      <find>lazyrouter</find>
+      <find>lazyrouter =</find>
+      <find>method</find>
+      <find>listen</find>
+      <find>Router</find>
+      <find>dispatch</find>
+      <find>app.</find>
+      <find>app.la</find>
+      <find>all</find>
+      <find>app.al</find>
+      <find>methos</find>
+      <find>route =</find>
+      <find>proto.use</find>
+      <find>app.use</find>
+      <find>app.listen</find>
+      <find>handle</find>
+      <find>handle_request</find>
+      <find>use</find>
+      <find>methods</find>
+      <find>route</find>
     </findStrings>
     <replaceStrings>
       <replace>Readable</replace>
@@ -118,49 +138,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Promise/Promise.js" />
-        <option value="$PROJECT_DIR$/Promise/README.md" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/async.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/a.txt" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/data.json" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/2.json" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/1.json" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/3.json" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/generator.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/test1.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/callback.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/event.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/promise.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/asyncReadFile.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/getapi/callback.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/getapi/promise.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/getapi/async.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/getapi/generator.js" />
-        <option value="$PROJECT_DIR$/异步流程控制的前世今生/README.md" />
-        <option value="$PROJECT_DIR$/异步流程控制的发展/README.md" />
-        <option value="$PROJECT_DIR$/编码/transfer.js" />
-        <option value="$PROJECT_DIR$/fstest.js" />
-        <option value="$PROJECT_DIR$/file/rmdir.js" />
-        <option value="$PROJECT_DIR$/stream/README.md" />
-        <option value="$PROJECT_DIR$/stream/pipe.md" />
-        <option value="$PROJECT_DIR$/stream/writable.md" />
-        <option value="os.js" />
-        <option value="internal/os.js" />
-        <option value="$PROJECT_DIR$/network/1.ip.js" />
-        <option value="$PROJECT_DIR$/network/network.md" />
-        <option value="$PROJECT_DIR$/network/readme.md" />
-        <option value="$PROJECT_DIR$/staticServer/package.json" />
-        <option value="$PROJECT_DIR$/staticServer/src/template.html" />
-        <option value="$PROJECT_DIR$/staticServer/src/template/index.css" />
-        <option value="$PROJECT_DIR$/staticServer/src/template/template.html" />
-        <option value="$PROJECT_DIR$/staticServer/bin/www.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/staticServer/config/index.js" />
-        <option value="$PROJECT_DIR$/staticServer/public/style/index.css" />
-        <option value="$PROJECT_DIR$/staticServer/src/test.js" />
         <option value="$PROJECT_DIR$/staticServer/public/index.html" />
         <option value="$PROJECT_DIR$/staticServer/src/index.js" />
         <option value="$PROJECT_DIR$/staticServer/README.md" />
+        <option value="vm:430" />
+        <option value="$PROJECT_DIR$/express/express/express.js" />
+        <option value="$PROJECT_DIR$/express/lib/router/rout.js" />
+        <option value="vm:128" />
+        <option value="url.js" />
+        <option value="$PROJECT_DIR$/express/test/4.middle.js" />
+        <option value="$PROJECT_DIR$/express/lib/requset.js" />
+        <option value="$PROJECT_DIR$/express/lib/response.js" />
+        <option value="$PROJECT_DIR$/express/lib/middleware/init.js" />
+        <option value="http.js" />
+        <option value="console.js" />
+        <option value="vm:3475" />
+        <option value="_http_outgoing.js" />
+        <option value="$PROJECT_DIR$/express/lib/express.js" />
+        <option value="$PROJECT_DIR$/express/lib/router/layer.js" />
+        <option value="$PROJECT_DIR$/express/lib/router/route.js" />
+        <option value="$PROJECT_DIR$/node_modules/express/lib/router/route.js" />
+        <option value="$PROJECT_DIR$/express/test/server.js" />
+        <option value="$PROJECT_DIR$/express/lib/router/index.js" />
+        <option value="$PROJECT_DIR$/express/lib/application.js" />
+        <option value="$PROJECT_DIR$/express/test/2.router.js" />
+        <option value="$PROJECT_DIR$/express/test/1.server.js" />
+        <option value="$PROJECT_DIR$/node_modules/express/lib/express.js" />
+        <option value="$PROJECT_DIR$/node_modules/express/lib/router/index.js" />
+        <option value="vm:197" />
+        <option value="$PROJECT_DIR$/express/test/5.router.js" />
+        <option value="$PROJECT_DIR$/express/test/route.js" />
+        <option value="$PROJECT_DIR$/express/test/2.middle.js" />
+        <option value="$PROJECT_DIR$/node_modules/express/lib/application.js" />
+        <option value="$PROJECT_DIR$/express/test/2.next.js" />
+        <option value="$PROJECT_DIR$/express/test/index.html" />
+        <option value="$PROJECT_DIR$/express/test/4.view.js" />
+        <option value="$PROJECT_DIR$/express/test/1.route.js" />
+        <option value="$PROJECT_DIR$/express/test/3.err.js" />
+        <option value="bootstrap_node.js" />
+        <option value="module.js" />
+        <option value="_http_server.js" />
+        <option value="_http_common.js" />
+        <option value="async_hooks.js" />
+        <option value="internal/process/next_tick.js" />
+        <option value="timers.js" />
+        <option value="internal/inspector_async_hook.js" />
+        <option value="net.js" />
+        <option value="events.js" />
+        <option value="$PROJECT_DIR$/express/test/createRouter2.js" />
+        <option value="$PROJECT_DIR$/express/test/createRouter.js" />
+        <option value="$PROJECT_DIR$/express/test/5.middleware.js" />
+        <option value="$PROJECT_DIR$/express/README.md" />
       </list>
     </option>
   </component>
@@ -181,11 +209,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
     <handled-path value="$PROJECT_DIR$/staticServer/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="108" />
-    <option name="y" value="23" />
-    <option name="width" value="1310" />
-    <option name="height" value="815" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -217,30 +243,25 @@
             <path>
               <item name="architect" type="b2602c69:ProjectViewProjectNode" />
               <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="staticServer" type="462c0819:PsiDirectoryNode" />
+              <item name="express" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="architect" type="b2602c69:ProjectViewProjectNode" />
               <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="staticServer" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="express" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="architect" type="b2602c69:ProjectViewProjectNode" />
               <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="staticServer" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="express" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="architect" type="b2602c69:ProjectViewProjectNode" />
               <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="staticServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="architect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="异步流程控制的发展" type="462c0819:PsiDirectoryNode" />
+              <item name="Promise" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,16 +279,18 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/express/express" />
       <recent name="$PROJECT_DIR$/staticServer/src" />
       <recent name="$PROJECT_DIR$/staticServer/src/template" />
       <recent name="$PROJECT_DIR$/staticServer/public/images" />
       <recent name="$PROJECT_DIR$/network" />
-      <recent name="$PROJECT_DIR$/file" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/express/test" />
       <recent name="$PROJECT_DIR$/staticServer/public/images" />
       <recent name="$PROJECT_DIR$/network" />
     </key>
@@ -284,26 +307,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
-    <configuration name="1.ip.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="1.ip.js" working-dir="$PROJECT_DIR$/network" />
-    <configuration name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/staticServer/src" />
-    <configuration name="my_http.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="my_http.js" working-dir="$PROJECT_DIR$/network/my_http" />
-    <configuration name="rmdir.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="rmdir.js" working-dir="$PROJECT_DIR$/file" />
-    <configuration name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/staticServer/src" />
+  <component name="RunManager" selected="Node.js.5.middleware.js">
+    <configuration name="2.next.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="2.next.js" working-dir="$PROJECT_DIR$/express/test" />
+    <configuration name="3.err.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="3.err.js" working-dir="$PROJECT_DIR$/express/test" />
+    <configuration name="4.view.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="4.view.js" working-dir="$PROJECT_DIR$/express/test" />
+    <configuration name="5.middleware.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="5.middleware.js" working-dir="$PROJECT_DIR$/express/test" />
+    <configuration name="route.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/express/test/1.route.js" working-dir="$PROJECT_DIR$/express/test" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.rmdir.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.1.ip.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.my_http.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.index.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.test.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.route.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.2.next.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.3.err.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.4.view.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.5.middleware.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.index.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.my_http.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.1.ip.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.rmdir.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.5.middleware.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.route.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.3.err.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.4.view.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.2.next.js" />
       </list>
     </recent_temporary>
   </component>
@@ -328,34 +351,59 @@
       <workItem from="1519969243929" duration="15791000" />
       <workItem from="1519993573083" duration="13325000" />
       <workItem from="1520121223157" duration="3802000" />
-      <workItem from="1520216695347" duration="1236000" />
+      <workItem from="1520216695347" duration="1647000" />
+      <workItem from="1520235947130" duration="9842000" />
+      <workItem from="1520302036880" duration="19067000" />
+      <workItem from="1520342185341" duration="66718000" />
+      <workItem from="1521040667959" duration="308000" />
+      <workItem from="1521080503580" duration="62220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93542000" />
+    <option name="totallyTimeSpent" value="252108000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="108" y="23" width="1310" height="815" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13110939" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10993657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21483377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.4947146" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3784764" sideWeight="0.50528544" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23095526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20555556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1777509" sideWeight="0.4947146" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22128174" sideWeight="0.4947146" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30592504" sideWeight="0.50528544" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40145102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.49753347" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21071176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40145102" sideWeight="0.4947146" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -365,375 +413,622 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://async_hooks.js</url>
+          <line>466</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/response.js</url>
+          <line>1007</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/application.js</url>
+          <line>566</line>
+          <properties />
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/router/route.js</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/test/createRouter2.js</url>
+          <line>4</line>
+          <properties />
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/router/index.js</url>
+          <line>279</line>
+          <properties />
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/express/lib/router/index.js</url>
+          <line>283</line>
+          <properties />
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="183" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="layer" language="JavaScript" />
+        <watch expression="app._router.stack" language="JavaScript" />
+        <watch expression="layer.handle" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stream/writable.md">
+    <entry file="file://$PROJECT_DIR$/staticServer/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="948" column="0" lean-forward="false" selection-start-line="948" selection-start-column="0" selection-end-line="948" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="435" column="52" lean-forward="true" selection-start-line="435" selection-start-column="52" selection-end-line="435" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/methods/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/utils-merge/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/qs/lib/parse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/array-flatten/array-flatten.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/finalhandler/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="135" column="2" lean-forward="false" selection-start-line="135" selection-start-column="2" selection-end-line="135" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/lib/response.js" />
+    <entry file="file://$PROJECT_DIR$/express/lib/requset.js" />
+    <entry file="file://$PROJECT_DIR$/express/lib/middleware/init.js" />
+    <entry file="file://$PROJECT_DIR$/express/lib/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/lib/router/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/lib/router/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/2.middle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/1.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/2.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/serve-static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="1007" column="2" lean-forward="false" selection-start-line="1007" selection-start-column="2" selection-end-line="1007" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/4.view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/2.next.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding>
+              <marker date="1506621299000" expanded="true" signature="505:534" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/History.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/rmdir.js">
+    <entry file="file://$PROJECT_DIR$/express/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promise/Promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promise/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="825">
-            <caret line="55" column="0" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="55" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promise/Promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/node-fetch/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2676">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的前世今生/a.txt" />
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/test/test1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/test/async.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/test/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/callback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="47" column="19" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/async.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/异步流程控制的发展/getapi/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/编码/transfer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="49" column="3" lean-forward="false" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/rmdir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Promise/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-3111">
-            <caret line="57" column="7" lean-forward="false" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stream/pipe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="4622" column="0" lean-forward="false" selection-start-line="4622" selection-start-column="0" selection-end-line="4622" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/1.ip.js">
+    <entry file="file://$PROJECT_DIR$/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/osi-tcpip.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/my_http/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/my_http/parser.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/parseurl/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/my_http/my_http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="295">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/tcpip.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stream/writable.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/tcp.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/response.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/request.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/network/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="393">
-            <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <first_editor relative-caret-position="214">
+            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="22" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/express/create.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/get.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/3.err.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="210">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/config/index.js">
+    <entry file="file://$PROJECT_DIR$/express/test/1.route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/src/template/template.html">
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/middleware/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="426">
+          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/middleware/query.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding>
+            <element signature="e#1566#3141#0" expanded="false" />
+            <element signature="e#7827#8033#0" expanded="false" />
+            <element signature="e#9380#9456#0" expanded="false" />
+            <element signature="e#10036#10068#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+          <folding>
+            <element signature="e#1728#1984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/createRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/createRouter2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/debug/src/debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="114" column="2" lean-forward="false" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/test/5.middleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#Layer#0" expanded="false" />
+            <element signature="e#1191#1385#0" expanded="false" />
+            <element signature="e#1964#2872#0" expanded="false" />
+            <element signature="n#!!block;n#decode_param#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="115" column="29" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#Route#0" expanded="false" />
+            <element signature="e#958#1157#0" expanded="false" />
+            <element signature="e#1270#1557#0" expanded="false" />
+            <element signature="e#3046#3518#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="497" column="30" lean-forward="false" selection-start-line="497" selection-start-column="25" selection-end-line="497" selection-end-column="30" />
+          <folding>
+            <element signature="e#1318#2452#0" expanded="false" />
+            <element signature="e#2493#3283#0" expanded="false" />
+            <element signature="e#9260#9632#0" expanded="false" />
+            <element signature="e#9649#10178#0" expanded="false" />
+            <element signature="n#!!block;n#appendMethods#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/异步流程控制的发展/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-807">
-            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <first_editor relative-caret-position="-2482">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1516248947000" expanded="true" signature="326:540" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="384:536" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="403:444" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="450:530" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="559:740" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="618:737" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="685:730" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="887:1101" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="945:1097" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="964:1005" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1011:1091" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1119:1143" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1190:1316" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1216:1264" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1268:1314" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1365:1421" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1476:1589" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1507:1585" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1623:1738" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1656:1734" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1772:1846" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1805:1842" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="1967:2266" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2018:2262" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2080:2254" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2103:2147" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2153:2244" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2298:2360" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2383:2447" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2470:2500" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2749:3048" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2800:3044" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2862:3036" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2885:2929" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="2935:3026" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3069:3195" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3265:3311" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3334:3398" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3421:3512" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3535:3565" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3703:4003" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3755:3999" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3817:3991" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3840:3884" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="3890:3981" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4033:4464" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4104:4163" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4219:4278" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4304:4458" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4329:4452" ph="{...}" />
+              <marker date="1516248947000" expanded="true" signature="4386:4440" ph="{...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/src/template/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/public/style/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/src/forbidden.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/public/images/1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/src/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/bin/www.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="141" column="5" lean-forward="true" selection-start-line="137" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticServer/README.md">
+    <entry file="file://$PROJECT_DIR$/Promise/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="401">
-            <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-            <folding />
+          <first_editor relative-caret-position="-4027">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1515821085000" expanded="true" signature="862:1835" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="904:995" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1202:1511" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1244:1303" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1343:1505" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1545:1743" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1586:1737" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1754:1796" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="1807:1833" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="2790:4784" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="2886:2915" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="2990:3019" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3046:3077" ph="/**  分别处理实例的三种状态 ...*/" />
+              <marker date="1515821085000" expanded="true" signature="3115:3476" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3179:3468" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3216:3456" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3238:3381" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3392:3442" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3513:3874" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3577:3866" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3614:3854" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3636:3779" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3790:3840" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3910:4759" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="3974:4751" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4036:4356" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4077:4340" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4103:4253" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4264:4322" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4419:4739" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4460:4723" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4486:4636" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4647:4705" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="4914:4962" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="5713:6570" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="5738:5784" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="5881:6535" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="5895:6436" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="5968:6377" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6012:6198" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6213:6362" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6383:6426" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6447:6529" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6541:6568" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6717:7472" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6795:7468" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6883:7462" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="6967:7030" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7069:7305" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7100:7291" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7176:7273" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7320:7450" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7351:7436" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7604:8224" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7658:8221" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7738:8215" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7822:7885" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7924:8058" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="7955:8044" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8073:8203" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8104:8189" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8362:8675" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8400:8429" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8482:8672" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8584:8621" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8627:8666" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8806:8889" ph="{...}" />
+              <marker date="1515821085000" expanded="true" signature="8860:8886" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="486">
+            <caret line="175" column="38" lean-forward="false" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
+            <folding>
+              <marker date="1521302296000" expanded="true" signature="958:1001" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="1024:1060" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="1157:1275" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="1196:1233" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="1490:1651" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="1504:1649" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="2017:2179" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="2080:2082" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="2417:2509" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="3461:3623" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="3524:3526" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="3661:3926" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="3731:3905" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="4001:4134" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="4044:4132" ph="[...]" />
+              <marker date="1521302296000" expanded="true" signature="4059:4126" ph="{&quot;handle&quot;: 用户代码...}" />
+              <marker date="1521302296000" expanded="true" signature="4357:4359" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="4527:4565" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="4589:4647" ph="{...}" />
+              <marker date="1521302296000" expanded="true" signature="4734:4776" ph="{...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
