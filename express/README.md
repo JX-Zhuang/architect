@@ -166,7 +166,7 @@ Layer{
 ![图片](./middleware.png)
 * Router的实例是一个完整的中间件和路由系统，因此常称其为一个 “mini-app”。app的use和定义路由方法很多都是通过Router实现的。
 * app、Router、Route、Layer的主要数据结构可以用下图表示
-![图片](./data.png)
+![图片](./data.jpg)
 #### 总结
 * 路由和中间件是express的核心，学会路由和中间件，再学express其他相关的会事半功倍。
 * 阅读源码，不仅知道了express的原理，还从代码中学到了用代理模式的优点，一处实现，多处调用，职责单一，改动小。
