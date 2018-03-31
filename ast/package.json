@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-types": "^6.26.0",
+    "escodegen": "^1.9.1",
+    "esprima": "^4.0.0",
+    "estraverse": "^4.2.0"
+  }
+}

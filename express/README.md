@@ -10,7 +10,7 @@ index里只有一句话
 ```javascript
 module.exports = require('./lib/express');
 ```
-倒入express，并导出。express文件里是导出许多api，像express、express.Router等。我们开发是用到的express()，实际上是执行createApplication()。application里是和app相关的api。
+导入express，并导出。express文件里是导出许多api，像express、express.Router等。我们开发是用到的express()，实际上是执行createApplication()。application里是和app相关的api。
 router/index里是和router相关的代码，router可以理解成路由器，把各个请求发给route。我们不会直接调用router/layer里的方法，layer是一个抽象概念，在express里中间件、路由都放在app._router.stack里，stack里的每个元素就是一个layer。
 route里也有一个stack，里面的元素也是layer。
 #### 🌰
