@@ -1,16 +1,17 @@
+# 包教包会Redux
 > react里父子组件可以通过props通信，兄弟组件通信需要把数据传递给父组件，再由父组件传递给另一个子组件。以兄弟组件通信为需求，写一个redux。
 
 ### 问题
-![](https://user-gold-cdn.xitu.io/2018/4/24/162f7eafed0551db?w=430&h=276&f=png&s=13442)
+![](https://github.com/JX-Zhuang/architect/blob/master/redux/images/1.png)
 这是一个计数器，点击按钮，可以让数字加一或者减一。两个按钮在Counter组件里，显示数字的在Number组件里。
 
 ### 兄弟组件通信
 * 首先分析这个需求，点击button，改变数字，Number组件重新渲染。
-![](https://user-gold-cdn.xitu.io/2018/4/24/162f7f5e82a4753b?w=1224&h=136&f=jpeg&s=29794)
+![](https://github.com/JX-Zhuang/architect/blob/master/redux/images/2.png)
 * 可抽象为，派发一个动作，改变状态，执行方法。
-![](https://user-gold-cdn.xitu.io/2018/4/24/162f7f9ab6f3b837?w=1046&h=150&f=jpeg&s=19959)
+![](https://github.com/JX-Zhuang/architect/blob/master/redux/images/3.png)
 * 根据上两步分析，可以看出组件通信的核心是动作（action）、执行方法（reducer）、状态（state）
-![](https://user-gold-cdn.xitu.io/2018/4/24/162f80d3f24e6940?w=1188&h=376&f=jpeg&s=46468)
+![](https://github.com/JX-Zhuang/architect/blob/master/redux/images/4.png)
 * action、reducer
 ```javascript
 export const INCREMENT = 'INCREMENT';
@@ -264,7 +265,7 @@ export default connect(state=>state.counter,actions)(Number);
 ```
 ### redux中间件
 * 最后实现redux中间件。redux中间件是洋葱模型，和koa的中间件原理一样。
-![](https://user-gold-cdn.xitu.io/2018/4/24/162f8551640c2772?w=890&h=504&f=png&s=73133)
+![](https://github.com/JX-Zhuang/architect/blob/master/redux/images/5.png)
 * 开发中会有多个中间件，中间件是函数，要把第一个中间件的结果作为参数传递给第二个中间件，依次执行，先实现这个compose函数
 ```javascript
 function compose(...fns) {
