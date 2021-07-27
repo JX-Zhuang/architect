@@ -3,6 +3,7 @@ let require, define;
     const variables = {};
     const globalDefQueue = [];
     let module = {};
+    let modules = {};
     function hasAlldependencies(dependencies) {
         let hasValue = true
         dependencies.forEach(depd => {
@@ -31,6 +32,7 @@ let require, define;
         script.type = "text/javascript";
         script.charset = 'utf-8';
         script.setAttribute('data-requiremodule', model);
+        script.async = true;
         head.appendChild(script);
         script.addEventListener('load', function (event) {
             callback.call(this);
@@ -54,17 +56,19 @@ let require, define;
             deps = [];
         }
         if (!deps.length) {
-            console.log(module)
             module = {
                 value: callback()
             }
             return;
         }
-        module = { deps: deps.map(item => item.replace('./', '')), callback: callback ? callback : function () { } };
+        module = {
+            deps: deps.map(item => item.replace('./', '')),
+            callback: callback ? callback : function () { }
+        };
         globalDefQueue.push(module);
         deps.forEach(item => {
-            loadScript(getFilePath(item), getModule(item), function () {
-                const moduleName = name ? name : this.getAttribute('data-requiremodule');;
+            const moduleName = name ? name : getModule(item);
+            loadScript(getFilePath(item), moduleName, function () {
                 if (module.hasOwnProperty('value')) {
                     variables[moduleName] = module.value;
                 } else {
