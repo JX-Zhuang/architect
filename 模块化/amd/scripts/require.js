@@ -32,9 +32,10 @@ let require, define;
         script.type = "text/javascript";
         script.charset = 'utf-8';
         script.setAttribute('data-requiremodule', model);
-        script.async = true;
+        // script.async = true;
         head.appendChild(script);
         script.addEventListener('load', function (event) {
+            console.log('loaded',model)
             callback.call(this);
             implementCallback();
         });
