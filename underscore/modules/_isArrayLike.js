@@ -1,3 +1,4 @@
 module.exports = function (list) {
-    return Array.isArray(list);
+    const length = list ? list.length : undefined;
+    return typeof length === 'number' && length >= 0;
 }

@@ -157,10 +157,10 @@
     // doubled = _([1, 2, 3]).map(function(num){ return num * 2; });
     // assert.deepEqual(doubled, [2, 4, 6], 'OO-style doubled numbers');
 
-    // var ids = _.map({length: 2, 0: {id: '1'}, 1: {id: '2'}}, function(n){
-    //   return n.id;
-    // });
-    // assert.deepEqual(ids, ['1', '2'], 'Can use collection methods on Array-likes.');
+    var ids = _.map({length: 2, 0: {id: '1'}, 1: {id: '2'}}, function(n){
+      return n.id;
+    });
+    assert.deepEqual(ids, ['1', '2'], 'Can use collection methods on Array-likes.');
 
     assert.deepEqual(_.map(null, _.noop), [], 'handles a null properly');
 
@@ -169,8 +169,8 @@
     }, [5]), [1], 'called with context');
 
     // Passing a property name like _.pluck.
-    // var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
-    // assert.deepEqual(_.map(people, 'name'), ['moe', 'curly'], 'predicate string map to object properties');
+    var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
+    assert.deepEqual(_.map(people, 'name'), ['moe', 'curly'], 'predicate string map to object properties');
   });
 
   // QUnit.test('collect', function(assert) {

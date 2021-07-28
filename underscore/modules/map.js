@@ -1,8 +1,8 @@
 const isArrayLike = require("./_isArrayLike");
-const optimizeCb = require("./_optimizeCb");
+const cb = require("./_cb");
 const keys = require("./keys");
 module.exports = function (list, iteratee, context) {
-    iteratee = optimizeCb(iteratee, context);
+    iteratee = cb(iteratee, context);
     const _keys = !isArrayLike(list) && keys(list),
         length = (_keys || list).length,
         result = new Array(length);
