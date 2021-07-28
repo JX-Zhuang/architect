@@ -1,7 +1,7 @@
 ### Collections
 - [x] each
-- [ ]map
-- []reduce
+- [ ] map
+- [] reduce
 - []reduceRight
 - []find
 - []filter
