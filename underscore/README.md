@@ -1,6 +1,6 @@
 ### Collections
 - [x] each
-- []map
+- [ ]map
 - []reduce
 - []reduceRight
 - []find
