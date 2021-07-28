@@ -1,5 +1,5 @@
 ### Collections
-- []each
+- [x] each
 - []map
 - []reduce
 - []reduceRight
