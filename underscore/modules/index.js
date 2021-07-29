@@ -13,5 +13,7 @@ module.exports = {
   map: require('./map'),
   noop: require('./noop'),
   reduce: require('./reduce'),
-  reduceRight:require('./reduceRight')
+  reduceRight: require('./reduceRight'),
+  toArray: require('./toArray'),
+  isArray: require('./isArray')
 };

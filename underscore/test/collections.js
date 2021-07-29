@@ -849,31 +849,31 @@
   //   assert.notDeepEqual(partialSampleSorted, _.range(10), 'samples from the whole array, not just the beginning');
   // });
 
-  // QUnit.test('toArray', function(assert) {
-  //   assert.ok(!_.isArray(arguments), 'arguments object is not an array');
-  //   assert.ok(_.isArray(_.toArray(arguments)), 'arguments object converted into array');
-  //   var a = [1, 2, 3];
-  //   assert.notStrictEqual(_.toArray(a), a, 'array is cloned');
-  //   assert.deepEqual(_.toArray(a), [1, 2, 3], 'cloned array contains same elements');
+  QUnit.test('toArray', function(assert) {
+    assert.ok(!_.isArray(arguments), 'arguments object is not an array');
+    assert.ok(_.isArray(_.toArray(arguments)), 'arguments object converted into array');
+    var a = [1, 2, 3];
+    assert.notStrictEqual(_.toArray(a), a, 'array is cloned');
+    assert.deepEqual(_.toArray(a), [1, 2, 3], 'cloned array contains same elements');
 
-  //   var numbers = _.toArray({one: 1, two: 2, three: 3});
-  //   assert.deepEqual(numbers, [1, 2, 3], 'object flattened into array');
+    var numbers = _.toArray({one: 1, two: 2, three: 3});
+    assert.deepEqual(numbers, [1, 2, 3], 'object flattened into array');
 
-  //   var hearts = '\uD83D\uDC95';
-  //   var pair = hearts.split('');
-  //   var expected = [pair[0], hearts, '&', hearts, pair[1]];
-  //   assert.deepEqual(_.toArray(expected.join('')), expected, 'maintains astral characters');
-  //   assert.deepEqual(_.toArray(''), [], 'empty string into empty array');
+    var hearts = '\uD83D\uDC95';
+    var pair = hearts.split('');
+    var expected = [pair[0], hearts, '&', hearts, pair[1]];
+    assert.deepEqual(_.toArray(expected.join('')), expected, 'maintains astral characters');
+    assert.deepEqual(_.toArray(''), [], 'empty string into empty array');
 
-  //   if (typeof document != 'undefined') {
-  //     // test in IE < 9
-  //     var actual;
-  //     try {
-  //       actual = _.toArray(document.childNodes);
-  //     } catch (e) { /* ignored */ }
-  //     assert.deepEqual(actual, _.map(document.childNodes, _.identity), 'works on NodeList');
-  //   }
-  // });
+    if (typeof document != 'undefined') {
+      // test in IE < 9
+      var actual;
+      try {
+        actual = _.toArray(document.childNodes);
+      } catch (e) { /* ignored */ }
+      assert.deepEqual(actual, _.map(document.childNodes, _.identity), 'works on NodeList');
+    }
+  });
 
   // QUnit.test('size', function(assert) {
   //   assert.strictEqual(_.size({one: 1, two: 2, three: 3}), 3, 'can compute the size of an object');
