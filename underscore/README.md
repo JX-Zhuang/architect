@@ -46,7 +46,8 @@
 - [ ] findIndex
 - [ ] findLastIndex
 - [ ] range
-Functions
+
+### Functions
 - [ ] bind
 - [ ] bindAll
 - [ ] partial
