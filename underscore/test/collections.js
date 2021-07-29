@@ -177,28 +177,28 @@
   //   assert.strictEqual(_.collect, _.map, 'is an alias for map');
   // });
 
-  // QUnit.test('reduce', function(assert) {
-  //   var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
-  //   assert.strictEqual(sum, 6, 'can sum up an array');
+  QUnit.test('reduce', function(assert) {
+    var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+    assert.strictEqual(sum, 6, 'can sum up an array');
 
-  //   var context = {multiplier: 3};
-  //   sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num * this.multiplier; }, 0, context);
-  //   assert.strictEqual(sum, 18, 'can reduce with a context object');
+    var context = {multiplier: 3};
+    sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num * this.multiplier; }, 0, context);
+    assert.strictEqual(sum, 18, 'can reduce with a context object');
 
-  //   sum = _([1, 2, 3]).reduce(function(memo, num){ return memo + num; }, 0);
-  //   assert.strictEqual(sum, 6, 'OO-style reduce');
+    // sum = _([1, 2, 3]).reduce(function(memo, num){ return memo + num; }, 0);
+    // assert.strictEqual(sum, 6, 'OO-style reduce');
 
-  //   sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; });
-  //   assert.strictEqual(sum, 6, 'default initial value');
+    sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; });
+    assert.strictEqual(sum, 6, 'default initial value');
 
-  //   var prod = _.reduce([1, 2, 3, 4], function(memo, num){ return memo * num; });
-  //   assert.strictEqual(prod, 24, 'can reduce via multiplication');
+    var prod = _.reduce([1, 2, 3, 4], function(memo, num){ return memo * num; });
+    assert.strictEqual(prod, 24, 'can reduce via multiplication');
 
-  //   assert.strictEqual(_.reduce(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
-  //   assert.strictEqual(_.reduce([], _.noop, void 0), void 0, 'undefined can be passed as a special case');
-  //   assert.strictEqual(_.reduce([_], _.noop), _, 'collection of length one with no initial value returns the first item');
-  //   assert.strictEqual(_.reduce([], _.noop), void 0, 'returns undefined when collection is empty and no initial value');
-  // });
+    assert.strictEqual(_.reduce(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
+    assert.strictEqual(_.reduce([], _.noop, void 0), void 0, 'undefined can be passed as a special case');
+    // assert.strictEqual(_.reduce([_], _.noop), _, 'collection of length one with no initial value returns the first item');
+    assert.strictEqual(_.reduce([], _.noop), void 0, 'returns undefined when collection is empty and no initial value');
+  });
 
   // QUnit.test('foldl', function(assert) {
   //   assert.strictEqual(_.foldl, _.reduce, 'is an alias for reduce');
@@ -208,55 +208,55 @@
   //   assert.strictEqual(_.inject, _.reduce, 'is an alias for reduce');
   // });
 
-  // QUnit.test('reduceRight', function(assert) {
-  //   var list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; }, '');
-  //   assert.strictEqual(list, 'bazbarfoo', 'can perform right folds');
+  QUnit.test('reduceRight', function(assert) {
+    var list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; }, '');
+    assert.strictEqual(list, 'bazbarfoo', 'can perform right folds');
 
-  //   list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; });
-  //   assert.strictEqual(list, 'bazbarfoo', 'default initial value');
+    list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; });
+    assert.strictEqual(list, 'bazbarfoo', 'default initial value');
 
-  //   var sum = _.reduceRight({a: 1, b: 2, c: 3}, function(memo, num){ return memo + num; });
-  //   assert.strictEqual(sum, 6, 'default initial value on object');
+    var sum = _.reduceRight({a: 1, b: 2, c: 3}, function(memo, num){ return memo + num; });
+    assert.strictEqual(sum, 6, 'default initial value on object');
 
-  //   assert.strictEqual(_.reduceRight(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
-  //   assert.strictEqual(_.reduceRight([_], _.noop), _, 'collection of length one with no initial value returns the first item');
+    assert.strictEqual(_.reduceRight(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
+    // assert.strictEqual(_.reduceRight([_], _.noop), _, 'collection of length one with no initial value returns the first item');
 
-  //   assert.strictEqual(_.reduceRight([], _.noop, void 0), void 0, 'undefined can be passed as a special case');
-  //   assert.strictEqual(_.reduceRight([], _.noop), void 0, 'returns undefined when collection is empty and no initial value');
+    assert.strictEqual(_.reduceRight([], _.noop, void 0), void 0, 'undefined can be passed as a special case');
+    assert.strictEqual(_.reduceRight([], _.noop), void 0, 'returns undefined when collection is empty and no initial value');
 
-  //   // Assert that the correct arguments are being passed.
+    // Assert that the correct arguments are being passed.
 
-  //   var args,
-  //       init = {},
-  //       object = {a: 1, b: 2},
-  //       lastKey = _.keys(object).pop();
+    // var args,
+    //     init = {},
+    //     object = {a: 1, b: 2},
+    //     lastKey = _.keys(object).pop();
 
-  //   var expected = lastKey === 'a'
-  //     ? [init, 1, 'a', object]
-  //     : [init, 2, 'b', object];
+    // var expected = lastKey === 'a'
+    //   ? [init, 1, 'a', object]
+    //   : [init, 2, 'b', object];
 
-  //   _.reduceRight(object, function() {
-  //     if (!args) args = _.toArray(arguments);
-  //   }, init);
+    // _.reduceRight(object, function() {
+    //   if (!args) args = _.toArray(arguments);
+    // }, init);
 
-  //   assert.deepEqual(args, expected);
+    // assert.deepEqual(args, expected);
 
-  //   // And again, with numeric keys.
+    // // And again, with numeric keys.
 
-  //   object = {2: 'a', 1: 'b'};
-  //   lastKey = _.keys(object).pop();
-  //   args = null;
+    // object = {2: 'a', 1: 'b'};
+    // lastKey = _.keys(object).pop();
+    // args = null;
 
-  //   expected = lastKey === '2'
-  //     ? [init, 'a', '2', object]
-  //     : [init, 'b', '1', object];
+    // expected = lastKey === '2'
+    //   ? [init, 'a', '2', object]
+    //   : [init, 'b', '1', object];
 
-  //   _.reduceRight(object, function() {
-  //     if (!args) args = _.toArray(arguments);
-  //   }, init);
+    // _.reduceRight(object, function() {
+    //   if (!args) args = _.toArray(arguments);
+    // }, init);
 
-  //   assert.deepEqual(args, expected);
-  // });
+    // assert.deepEqual(args, expected);
+  });
 
   // QUnit.test('foldr', function(assert) {
   //   assert.strictEqual(_.foldr, _.reduceRight, 'is an alias for reduceRight');

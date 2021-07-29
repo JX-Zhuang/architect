@@ -11,5 +11,7 @@ module.exports = {
   each,
   forEach: each,
   map: require('./map'),
-  noop: require('./noop')
+  noop: require('./noop'),
+  reduce: require('./reduce'),
+  reduceRight:require('./reduceRight')
 };

@@ -1,8 +1,8 @@
 ### Collections
 - [x] each
 - [x] map
-- [ ] reduce
-- [ ] reduceRight
+- [x] reduce
+- [x] reduceRight
 - [ ] find
 - [ ] filter
 - [ ] where
