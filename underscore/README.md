@@ -4,7 +4,7 @@
 - [x] reduce
 - [x] reduceRight
 - [x] find
-- [ ] filter
+- [x] filter
 - [ ] where
 - [ ] findWhere
 - [ ] reject

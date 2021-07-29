@@ -304,26 +304,26 @@
   //   assert.strictEqual(_.detect, _.find, 'is an alias for find');
   // });
 
-  // QUnit.test('filter', function(assert) {
-  //   var evenArray = [1, 2, 3, 4, 5, 6];
-  //   var evenObject = {one: 1, two: 2, three: 3};
-  //   var isEven = function(num){ return num % 2 === 0; };
+  QUnit.test('filter', function(assert) {
+    var evenArray = [1, 2, 3, 4, 5, 6];
+    var evenObject = {one: 1, two: 2, three: 3};
+    var isEven = function(num){ return num % 2 === 0; };
 
-  //   assert.deepEqual(_.filter(evenArray, isEven), [2, 4, 6]);
-  //   assert.deepEqual(_.filter(evenObject, isEven), [2], 'can filter objects');
-  //   assert.deepEqual(_.filter([{}, evenObject, []], 'two'), [evenObject], 'predicate string map to object properties');
+    assert.deepEqual(_.filter(evenArray, isEven), [2, 4, 6]);
+    assert.deepEqual(_.filter(evenObject, isEven), [2], 'can filter objects');
+    assert.deepEqual(_.filter([{}, evenObject, []], 'two'), [evenObject], 'predicate string map to object properties');
 
-  //   _.filter([1], function() {
-  //     assert.strictEqual(this, evenObject, 'given context');
-  //   }, evenObject);
+    _.filter([1], function() {
+      assert.strictEqual(this, evenObject, 'given context');
+    }, evenObject);
 
-  //   // Can be used like _.where.
-  //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-  //   assert.deepEqual(_.filter(list, {a: 1}), [{a: 1, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}]);
-  //   assert.deepEqual(_.filter(list, {b: 2}), [{a: 1, b: 2}, {a: 2, b: 2}]);
-  //   assert.deepEqual(_.filter(list, {}), list, 'Empty object accepts all items');
-  //   assert.deepEqual(_(list).filter({}), list, 'OO-filter');
-  // });
+    // Can be used like _.where.
+    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
+    assert.deepEqual(_.filter(list, {a: 1}), [{a: 1, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}]);
+    assert.deepEqual(_.filter(list, {b: 2}), [{a: 1, b: 2}, {a: 2, b: 2}]);
+    assert.deepEqual(_.filter(list, {}), list, 'Empty object accepts all items');
+    // assert.deepEqual(_(list).filter({}), list, 'OO-filter');
+  });
 
   // QUnit.test('select', function(assert) {
   //   assert.strictEqual(_.select, _.filter, 'is an alias for filter');

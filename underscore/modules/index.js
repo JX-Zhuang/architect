@@ -17,5 +17,6 @@ module.exports = {
   toArray: require('./toArray'),
   isArray: require('./isArray'),
   keys:require('./keys'),
-  find:require('./find')
+  find:require('./find'),
+  filter:require('./filter')
 };
