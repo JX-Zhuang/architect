@@ -21,7 +21,7 @@
 - [ ] countBy
 - [ ] shuffle
 - [ ] sample
-- [ ] toArray
+- [x] toArray
 - [ ] size
 - [ ] partition
 ### Arrays
