@@ -15,5 +15,7 @@ module.exports = {
   reduce: require('./reduce'),
   reduceRight: require('./reduceRight'),
   toArray: require('./toArray'),
-  isArray: require('./isArray')
+  isArray: require('./isArray'),
+  keys:require('./keys'),
+  find:require('./find')
 };

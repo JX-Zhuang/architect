@@ -3,7 +3,7 @@
 - [x] map
 - [x] reduce
 - [x] reduceRight
-- [ ] find
+- [x] find
 - [ ] filter
 - [ ] where
 - [ ] findWhere
