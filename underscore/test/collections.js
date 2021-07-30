@@ -454,57 +454,58 @@
   });
 
 
-  // QUnit.test('invoke', function(assert) {
-  //   assert.expect(13);
-  //   var list = [[5, 1, 7], [3, 2, 1]];
-  //   var result = _.invoke(list, 'sort');
-  //   assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
-  //   assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
+  QUnit.test('invoke', function(assert) {
+    assert.expect(13);
+    var list = [[5, 1, 7], [3, 2, 1]];
+    var result = _.invoke(list, 'sort');
+    assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
+    assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
 
-  //   _.invoke([{
-  //     method: function() {
-  //       assert.deepEqual(_.toArray(arguments), [1, 2, 3], 'called with arguments');
-  //     }
-  //   }], 'method', 1, 2, 3);
+    _.invoke([{
+      method: function() {
+        assert.deepEqual(_.toArray(arguments), [1, 2, 3], 'called with arguments');
+      }
+    }], 'method', 1, 2, 3);
 
-  //   assert.deepEqual(_.invoke([{a: null}, {}, {a: _.constant(1)}], 'a'), [null, void 0, 1], 'handles null & undefined');
+    assert.deepEqual(_.invoke([{a: null}, {}, {a: _.constant(1)}], 'a'), [null, void 0, 1], 'handles null & undefined');
 
-  //   assert.raises(function() {
-  //     _.invoke([{a: 1}], 'a');
-  //   }, TypeError, 'throws for non-functions');
+    assert.raises(function() {
+      _.invoke([{a: 1}], 'a');
+    }, TypeError, 'throws for non-functions');
 
-  //   var getFoo = _.constant('foo');
-  //   var getThis = function() { return this; };
-  //   var item = {
-  //     a: {
-  //       b: getFoo,
-  //       c: getThis,
-  //       d: null
-  //     },
-  //     e: getFoo,
-  //     f: getThis,
-  //     g: function() {
-  //       return {
-  //         h: getFoo
-  //       };
-  //     }
-  //   };
-  //   var arr = [item];
-  //   assert.deepEqual(_.invoke(arr, ['a', 'b']), ['foo'], 'supports deep method access via an array syntax');
-  //   assert.deepEqual(_.invoke(arr, ['a', 'c']), [item.a], 'executes deep methods on their direct parent');
-  //   assert.deepEqual(_.invoke(arr, ['a', 'd', 'z']), [void 0], 'does not try to access attributes of non-objects');
-  //   assert.deepEqual(_.invoke(arr, ['a', 'd']), [null], 'handles deep null values');
-  //   assert.deepEqual(_.invoke(arr, ['e']), ['foo'], 'handles path arrays of length one');
-  //   assert.deepEqual(_.invoke(arr, ['f']), [item], 'correct uses parent context with shallow array syntax');
-  //   assert.deepEqual(_.invoke(arr, ['g', 'h']), [void 0], 'does not execute intermediate functions');
+    var getFoo = _.constant('foo');
+    var getThis = function() { return this; };
+    var item = {
+      a: {
+        b: getFoo,
+        c: getThis,
+        d: null
+      },
+      e: getFoo,
+      f: getThis,
+      g: function() {
+        return {
+          h: getFoo
+        };
+      }
+    };
+    var arr = [item];
+    assert.deepEqual(_.invoke(arr, ['a', 'b']), ['foo'], 'supports deep method access via an array syntax');
+    assert.deepEqual(_.invoke(arr, ['a', 'c']), [item.a], 'executes deep methods on their direct parent');
+    assert.deepEqual(_.invoke(arr, ['a', 'd', 'z']), [void 0], 'does not try to access attributes of non-objects');
+    assert.deepEqual(_.invoke(arr, ['a', 'd']), [null], 'handles deep null values');
+    assert.deepEqual(_.invoke(arr, ['e']), ['foo'], 'handles path arrays of length one');
+    assert.deepEqual(_.invoke(arr, ['f']), [item], 'correct uses parent context with shallow array syntax');
+    assert.deepEqual(_.invoke(arr, ['g', 'h']), [void 0], 'does not execute intermediate functions');
 
-  //   arr = [{
-  //     a: function() { return 'foo'; }
-  //   }, {
-  //     a: function() { return 'bar'; }
-  //   }];
-  //   assert.deepEqual(_.invoke(arr, 'a'), ['foo', 'bar'], 'can handle different methods on subsequent objects');
-  // });
+    arr = [{
+      a: function() { return 'foo'; }
+    }, {
+      a: function() { return 'bar'; }
+    }];
+    assert.deepEqual(_.invoke(arr, 'a'), ['foo', 'bar'], 'can handle different methods on subsequent objects');
+  
+  });
 
   // QUnit.test('invoke w/ function reference', function(assert) {
   //   var list = [[5, 1, 7], [3, 2, 1]];
@@ -517,7 +518,7 @@
   //   }, 5), [6, 7, 8], 'receives params from invoke');
   // });
 
-  // // Relevant when using ClojureScript
+  // Relevant when using ClojureScript
   // QUnit.test('invoke when strings have a call method', function(assert) {
   //   String.prototype.call = function() {
   //     return 42;

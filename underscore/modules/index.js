@@ -29,5 +29,7 @@ module.exports = {
   some: require('./some'),
   contains,
   include: contains,
-  includes: contains
+  includes: contains,
+  invoke: require('./invoke'),
+  constant: require('./constant')
 };
