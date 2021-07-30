@@ -48,13 +48,13 @@
     assert.strictEqual(_.each(null, function () { }), null);
   });
 
-  QUnit.test('forEach', function(assert) {
+  QUnit.test('forEach', function (assert) {
     assert.strictEqual(_.forEach, _.each, 'is an alias for each');
   });
 
-  QUnit.test('lookupIterator with contexts', function(assert) {
-    _.each([true, false, 'yes', '', 0, 1, {}], function(context) {
-      _.each([1], function() {
+  QUnit.test('lookupIterator with contexts', function (assert) {
+    _.each([true, false, 'yes', '', 0, 1, {}], function (context) {
+      _.each([1], function () {
         assert.strictEqual(typeof this, 'object', 'context is a wrapped primitive');
         assert.strictEqual(this.valueOf(), context, 'the unwrapped context is the specified primitive');
         assert.equal(this, context, 'context can be coerced to the specified primitive');
@@ -146,30 +146,30 @@
   //   });
   // });
 
-  QUnit.test('map', function(assert) {
-    var doubled = _.map([1, 2, 3], function(num){ return num * 2; });
+  QUnit.test('map', function (assert) {
+    var doubled = _.map([1, 2, 3], function (num) { return num * 2; });
     assert.deepEqual(doubled, [2, 4, 6], 'doubled numbers');
 
-    var tripled = _.map([1, 2, 3], function(num){ return num * this.multiplier; }, {multiplier: 3});
+    var tripled = _.map([1, 2, 3], function (num) { return num * this.multiplier; }, { multiplier: 3 });
     assert.deepEqual(tripled, [3, 6, 9], 'tripled numbers with context');
 
     // TODO:还没有测试
     // doubled = _([1, 2, 3]).map(function(num){ return num * 2; });
     // assert.deepEqual(doubled, [2, 4, 6], 'OO-style doubled numbers');
 
-    var ids = _.map({length: 2, 0: {id: '1'}, 1: {id: '2'}}, function(n){
+    var ids = _.map({ length: 2, 0: { id: '1' }, 1: { id: '2' } }, function (n) {
       return n.id;
     });
     assert.deepEqual(ids, ['1', '2'], 'Can use collection methods on Array-likes.');
 
     assert.deepEqual(_.map(null, _.noop), [], 'handles a null properly');
 
-    assert.deepEqual(_.map([1], function() {
+    assert.deepEqual(_.map([1], function () {
       return this.length;
     }, [5]), [1], 'called with context');
 
     // Passing a property name like _.pluck.
-    var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
+    var people = [{ name: 'moe', age: 30 }, { name: 'curly', age: 50 }];
     assert.deepEqual(_.map(people, 'name'), ['moe', 'curly'], 'predicate string map to object properties');
   });
 
@@ -177,21 +177,21 @@
   //   assert.strictEqual(_.collect, _.map, 'is an alias for map');
   // });
 
-  QUnit.test('reduce', function(assert) {
-    var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+  QUnit.test('reduce', function (assert) {
+    var sum = _.reduce([1, 2, 3], function (memo, num) { return memo + num; }, 0);
     assert.strictEqual(sum, 6, 'can sum up an array');
 
-    var context = {multiplier: 3};
-    sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num * this.multiplier; }, 0, context);
+    var context = { multiplier: 3 };
+    sum = _.reduce([1, 2, 3], function (memo, num) { return memo + num * this.multiplier; }, 0, context);
     assert.strictEqual(sum, 18, 'can reduce with a context object');
 
     // sum = _([1, 2, 3]).reduce(function(memo, num){ return memo + num; }, 0);
     // assert.strictEqual(sum, 6, 'OO-style reduce');
 
-    sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; });
+    sum = _.reduce([1, 2, 3], function (memo, num) { return memo + num; });
     assert.strictEqual(sum, 6, 'default initial value');
 
-    var prod = _.reduce([1, 2, 3, 4], function(memo, num){ return memo * num; });
+    var prod = _.reduce([1, 2, 3, 4], function (memo, num) { return memo * num; });
     assert.strictEqual(prod, 24, 'can reduce via multiplication');
 
     assert.strictEqual(_.reduce(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
@@ -208,14 +208,14 @@
   //   assert.strictEqual(_.inject, _.reduce, 'is an alias for reduce');
   // });
 
-  QUnit.test('reduceRight', function(assert) {
-    var list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; }, '');
+  QUnit.test('reduceRight', function (assert) {
+    var list = _.reduceRight(['foo', 'bar', 'baz'], function (memo, str) { return memo + str; }, '');
     assert.strictEqual(list, 'bazbarfoo', 'can perform right folds');
 
-    list = _.reduceRight(['foo', 'bar', 'baz'], function(memo, str){ return memo + str; });
+    list = _.reduceRight(['foo', 'bar', 'baz'], function (memo, str) { return memo + str; });
     assert.strictEqual(list, 'bazbarfoo', 'default initial value');
 
-    var sum = _.reduceRight({a: 1, b: 2, c: 3}, function(memo, num){ return memo + num; });
+    var sum = _.reduceRight({ a: 1, b: 2, c: 3 }, function (memo, num) { return memo + num; });
     assert.strictEqual(sum, 6, 'default initial value on object');
 
     assert.strictEqual(_.reduceRight(null, _.noop, 138), 138, 'handles a null (with initial value) properly');
@@ -227,15 +227,15 @@
     // Assert that the correct arguments are being passed.
 
     var args,
-        init = {},
-        object = {a: 1, b: 2},
-        lastKey = _.keys(object).pop();
+      init = {},
+      object = { a: 1, b: 2 },
+      lastKey = _.keys(object).pop();
 
     var expected = lastKey === 'a'
       ? [init, 1, 'a', object]
       : [init, 2, 'b', object];
 
-    _.reduceRight(object, function() {
+    _.reduceRight(object, function () {
       if (!args) args = _.toArray(arguments);
     }, init);
 
@@ -243,7 +243,7 @@
 
     // And again, with numeric keys.
 
-    object = {2: 'a', 1: 'b'};
+    object = { 2: 'a', 1: 'b' };
     lastKey = _.keys(object).pop();
     args = null;
 
@@ -251,7 +251,7 @@
       ? [init, 'a', '2', object]
       : [init, 'b', '1', object];
 
-    _.reduceRight(object, function() {
+    _.reduceRight(object, function () {
       if (!args) args = _.toArray(arguments);
     }, init);
 
@@ -262,36 +262,36 @@
   //   assert.strictEqual(_.foldr, _.reduceRight, 'is an alias for reduceRight');
   // });
 
-  QUnit.test('find', function(assert) {
+  QUnit.test('find', function (assert) {
     var array = [1, 2, 3, 4];
-    assert.strictEqual(_.find(array, function(n) { return n > 2; }), 3, 'should return first found `value`');
-    assert.strictEqual(_.find(array, function() { return false; }), void 0, 'should return `undefined` if `value` is not found');
+    assert.strictEqual(_.find(array, function (n) { return n > 2; }), 3, 'should return first found `value`');
+    assert.strictEqual(_.find(array, function () { return false; }), void 0, 'should return `undefined` if `value` is not found');
 
     array.dontmatch = 55;
-    assert.strictEqual(_.find(array, function(x) { return x === 55; }), void 0, 'iterates array-likes correctly');
+    assert.strictEqual(_.find(array, function (x) { return x === 55; }), void 0, 'iterates array-likes correctly');
 
     // Matching an object like _.findWhere.
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}, {a: 2, b: 4}];
-    assert.deepEqual(_.find(list, {a: 1}), {a: 1, b: 2}, 'can be used as findWhere');
-    assert.deepEqual(_.find(list, {b: 4}), {a: 1, b: 4});
-    assert.ok(!_.find(list, {c: 1}), 'undefined when not found');
-    assert.ok(!_.find([], {c: 1}), 'undefined when searching empty list');
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }, { a: 2, b: 4 }];
+    assert.deepEqual(_.find(list, { a: 1 }), { a: 1, b: 2 }, 'can be used as findWhere');
+    assert.deepEqual(_.find(list, { b: 4 }), { a: 1, b: 4 });
+    assert.ok(!_.find(list, { c: 1 }), 'undefined when not found');
+    assert.ok(!_.find([], { c: 1 }), 'undefined when searching empty list');
 
-    var result = _.find([1, 2, 3], function(num){ return num * 2 === 4; });
+    var result = _.find([1, 2, 3], function (num) { return num * 2 === 4; });
     assert.strictEqual(result, 2, 'found the first "2" and broke the loop');
 
     var obj = {
-      a: {x: 1, z: 3},
-      b: {x: 2, z: 2},
-      c: {x: 3, z: 4},
-      d: {x: 4, z: 1}
+      a: { x: 1, z: 3 },
+      b: { x: 2, z: 2 },
+      c: { x: 3, z: 4 },
+      d: { x: 4, z: 1 }
     };
 
-    assert.deepEqual(_.find(obj, {x: 2}), {x: 2, z: 2}, 'works on objects');
-    assert.deepEqual(_.find(obj, {x: 2, z: 1}), void 0);
-    assert.deepEqual(_.find(obj, function(x) {
+    assert.deepEqual(_.find(obj, { x: 2 }), { x: 2, z: 2 }, 'works on objects');
+    assert.deepEqual(_.find(obj, { x: 2, z: 1 }), void 0);
+    assert.deepEqual(_.find(obj, function (x) {
       return x.x === 4;
-    }), {x: 4, z: 1});
+    }), { x: 4, z: 1 });
 
     // _.findIndex([{a: 1}], function(a, key, o) {
     //   assert.strictEqual(key, 0);
@@ -304,23 +304,23 @@
   //   assert.strictEqual(_.detect, _.find, 'is an alias for find');
   // });
 
-  QUnit.test('filter', function(assert) {
+  QUnit.test('filter', function (assert) {
     var evenArray = [1, 2, 3, 4, 5, 6];
-    var evenObject = {one: 1, two: 2, three: 3};
-    var isEven = function(num){ return num % 2 === 0; };
+    var evenObject = { one: 1, two: 2, three: 3 };
+    var isEven = function (num) { return num % 2 === 0; };
 
     assert.deepEqual(_.filter(evenArray, isEven), [2, 4, 6]);
     assert.deepEqual(_.filter(evenObject, isEven), [2], 'can filter objects');
     assert.deepEqual(_.filter([{}, evenObject, []], 'two'), [evenObject], 'predicate string map to object properties');
 
-    _.filter([1], function() {
+    _.filter([1], function () {
       assert.strictEqual(this, evenObject, 'given context');
     }, evenObject);
 
     // Can be used like _.where.
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    assert.deepEqual(_.filter(list, {a: 1}), [{a: 1, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}]);
-    assert.deepEqual(_.filter(list, {b: 2}), [{a: 1, b: 2}, {a: 2, b: 2}]);
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];
+    assert.deepEqual(_.filter(list, { a: 1 }), [{ a: 1, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }]);
+    assert.deepEqual(_.filter(list, { b: 2 }), [{ a: 1, b: 2 }, { a: 2, b: 2 }]);
     assert.deepEqual(_.filter(list, {}), list, 'Empty object accepts all items');
     // assert.deepEqual(_(list).filter({}), list, 'OO-filter');
   });
@@ -329,47 +329,47 @@
   //   assert.strictEqual(_.select, _.filter, 'is an alias for filter');
   // });
 
-  QUnit.test('reject', function(assert) {
-    var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; });
+  QUnit.test('reject', function (assert) {
+    var odds = _.reject([1, 2, 3, 4, 5, 6], function (num) { return num % 2 === 0; });
     assert.deepEqual(odds, [1, 3, 5], 'rejected each even number');
 
     var context = 'obj';
 
-    var evens = _.reject([1, 2, 3, 4, 5, 6], function(num){
+    var evens = _.reject([1, 2, 3, 4, 5, 6], function (num) {
       assert.strictEqual(context, 'obj');
       return num % 2 !== 0;
     }, context);
     assert.deepEqual(evens, [2, 4, 6], 'rejected each odd number');
 
-    assert.deepEqual(_.reject([odds, {one: 1, two: 2, three: 3}], 'two'), [odds], 'predicate string map to object properties');
+    assert.deepEqual(_.reject([odds, { one: 1, two: 2, three: 3 }], 'two'), [odds], 'predicate string map to object properties');
 
     // Can be used like _.where.
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    assert.deepEqual(_.reject(list, {a: 1}), [{a: 2, b: 2}]);
-    assert.deepEqual(_.reject(list, {b: 2}), [{a: 1, b: 3}, {a: 1, b: 4}]);
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];
+    assert.deepEqual(_.reject(list, { a: 1 }), [{ a: 2, b: 2 }]);
+    assert.deepEqual(_.reject(list, { b: 2 }), [{ a: 1, b: 3 }, { a: 1, b: 4 }]);
     assert.deepEqual(_.reject(list, {}), [], 'Returns empty list given empty object');
   });
 
-  QUnit.test('every', function(assert) {
+  QUnit.test('every', function (assert) {
     assert.ok(_.every([], _.identity), 'the empty set');
     assert.ok(_.every([true, true, true], _.identity), 'every true values');
     assert.ok(!_.every([true, false, true], _.identity), 'one false value');
-    assert.ok(_.every([0, 10, 28], function(num){ return num % 2 === 0; }), 'even numbers');
-    assert.ok(!_.every([0, 11, 28], function(num){ return num % 2 === 0; }), 'an odd number');
+    assert.ok(_.every([0, 10, 28], function (num) { return num % 2 === 0; }), 'even numbers');
+    assert.ok(!_.every([0, 11, 28], function (num) { return num % 2 === 0; }), 'an odd number');
     assert.strictEqual(_.every([1], _.identity), true, 'cast to boolean - true');
     assert.strictEqual(_.every([0], _.identity), false, 'cast to boolean - false');
     assert.ok(!_.every([void 0, void 0, void 0], _.identity), 'works with arrays of undefined');
 
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    assert.ok(!_.every(list, {a: 1, b: 2}), 'Can be called with object');
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];
+    assert.ok(!_.every(list, { a: 1, b: 2 }), 'Can be called with object');
     assert.ok(_.every(list, 'a'), 'String mapped to object property');
 
-    list = [{a: 1, b: 2}, {a: 2, b: 2, c: true}];
-    assert.ok(_.every(list, {b: 2}), 'Can be called with object');
+    list = [{ a: 1, b: 2 }, { a: 2, b: 2, c: true }];
+    assert.ok(_.every(list, { b: 2 }), 'Can be called with object');
     assert.ok(!_.every(list, 'c'), 'String mapped to object property');
 
-    assert.ok(_.every({a: 1, b: 2, c: 3, d: 4}, _.isNumber), 'takes objects');
-    assert.ok(!_.every({a: 1, b: 2, c: 3, d: 4}, _.isObject), 'takes objects');
+    assert.ok(_.every({ a: 1, b: 2, c: 3, d: 4 }, _.isNumber), 'takes objects');
+    assert.ok(!_.every({ a: 1, b: 2, c: 3, d: 4 }, _.isObject), 'takes objects');
     // assert.ok(_.every(['a', 'b', 'c', 'd'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
     // assert.ok(!_.every(['a', 'b', 'c', 'd', 'f'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
   });
@@ -378,67 +378,67 @@
   //   assert.strictEqual(_.all, _.every, 'is an alias for every');
   // });
 
-  QUnit.test('some', function(assert) {
+  QUnit.test('some', function (assert) {
     assert.ok(!_.some([]), 'the empty set');
     assert.ok(!_.some([false, false, false]), 'all false values');
     assert.ok(_.some([false, false, true]), 'one true value');
     assert.ok(_.some([null, 0, 'yes', false]), 'a string');
     assert.ok(!_.some([null, 0, '', false]), 'falsy values');
-    assert.ok(!_.some([1, 11, 29], function(num){ return num % 2 === 0; }), 'all odd numbers');
-    assert.ok(_.some([1, 10, 29], function(num){ return num % 2 === 0; }), 'an even number');
+    assert.ok(!_.some([1, 11, 29], function (num) { return num % 2 === 0; }), 'all odd numbers');
+    assert.ok(_.some([1, 10, 29], function (num) { return num % 2 === 0; }), 'an even number');
     assert.strictEqual(_.some([1], _.identity), true, 'cast to boolean - true');
     assert.strictEqual(_.some([0], _.identity), false, 'cast to boolean - false');
     assert.ok(_.some([false, false, true]));
 
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    assert.ok(!_.some(list, {a: 5, b: 2}), 'Can be called with object');
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];
+    assert.ok(!_.some(list, { a: 5, b: 2 }), 'Can be called with object');
     assert.ok(_.some(list, 'a'), 'String mapped to object property');
 
-    list = [{a: 1, b: 2}, {a: 2, b: 2, c: true}];
-    assert.ok(_.some(list, {b: 2}), 'Can be called with object');
+    list = [{ a: 1, b: 2 }, { a: 2, b: 2, c: true }];
+    assert.ok(_.some(list, { b: 2 }), 'Can be called with object');
     assert.ok(!_.some(list, 'd'), 'String mapped to object property');
 
-    assert.ok(_.some({a: '1', b: '2', c: '3', d: '4', e: 6}, _.isNumber), 'takes objects');
-    assert.ok(!_.some({a: 1, b: 2, c: 3, d: 4}, _.isObject), 'takes objects');
-    assert.ok(_.some(['a', 'b', 'c', 'd'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
-    assert.ok(!_.some(['x', 'y', 'z'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
+    assert.ok(_.some({ a: '1', b: '2', c: '3', d: '4', e: 6 }, _.isNumber), 'takes objects');
+    assert.ok(!_.some({ a: 1, b: 2, c: 3, d: 4 }, _.isObject), 'takes objects');
+    assert.ok(_.some(['a', 'b', 'c', 'd'], _.hasOwnProperty, { a: 1, b: 2, c: 3, d: 4 }), 'context works');
+    assert.ok(!_.some(['x', 'y', 'z'], _.hasOwnProperty, { a: 1, b: 2, c: 3, d: 4 }), 'context works');
   });
 
   // QUnit.test('any', function(assert) {
   //   assert.strictEqual(_.any, _.some, 'is an alias for some');
   // });
 
-  // QUnit.test('includes', function(assert) {
-  //   _.each([null, void 0, 0, 1, NaN, {}, []], function(val) {
-  //     assert.strictEqual(_.includes(val, 'hasOwnProperty'), false);
-  //   });
-  //   assert.strictEqual(_.includes([1, 2, 3], 2), true, 'two is in the array');
-  //   assert.ok(!_.includes([1, 3, 9], 2), 'two is not in the array');
+  QUnit.test('includes', function (assert) {
+    _.each([null, void 0, 0, 1, NaN, {}, []], function (val) {
+      assert.strictEqual(_.includes(val, 'hasOwnProperty'), false);
+    });
+    assert.strictEqual(_.includes([1, 2, 3], 2), true, 'two is in the array');
+    assert.ok(!_.includes([1, 3, 9], 2), 'two is not in the array');
 
-  //   assert.strictEqual(_.includes([5, 4, 3, 2, 1], 5, true), true, 'doesn\'t delegate to binary search');
+    assert.strictEqual(_.includes([5, 4, 3, 2, 1], 5, true), true, 'doesn\'t delegate to binary search');
 
-  //   assert.strictEqual(_.includes({moe: 1, larry: 3, curly: 9}, 3), true, '_.includes on objects checks their values');
-  //   assert.ok(_([1, 2, 3]).includes(2), 'OO-style includes');
+    assert.strictEqual(_.includes({ moe: 1, larry: 3, curly: 9 }, 3), true, '_.includes on objects checks their values');
+    // assert.ok(_([1, 2, 3]).includes(2), 'OO-style includes');
 
-  //   var numbers = [1, 2, 3, 1, 2, 3, 1, 2, 3];
-  //   assert.strictEqual(_.includes(numbers, 1, 1), true, 'takes a fromIndex');
-  //   assert.strictEqual(_.includes(numbers, 1, -1), false, 'takes a fromIndex');
-  //   assert.strictEqual(_.includes(numbers, 1, -2), false, 'takes a fromIndex');
-  //   assert.strictEqual(_.includes(numbers, 1, -3), true, 'takes a fromIndex');
-  //   assert.strictEqual(_.includes(numbers, 1, 6), true, 'takes a fromIndex');
-  //   assert.strictEqual(_.includes(numbers, 1, 7), false, 'takes a fromIndex');
+    var numbers = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+    assert.strictEqual(_.includes(numbers, 1, 1), true, 'takes a fromIndex');
+    assert.strictEqual(_.includes(numbers, 1, -1), false, 'takes a fromIndex');
+    assert.strictEqual(_.includes(numbers, 1, -2), false, 'takes a fromIndex');
+    assert.strictEqual(_.includes(numbers, 1, -3), true, 'takes a fromIndex');
+    assert.strictEqual(_.includes(numbers, 1, 6), true, 'takes a fromIndex');
+    assert.strictEqual(_.includes(numbers, 1, 7), false, 'takes a fromIndex');
 
-  //   assert.ok(_.every([1, 2, 3], _.partial(_.includes, numbers)), 'fromIndex is guarded');
-  // });
+    // assert.ok(_.every([1, 2, 3], _.partial(_.includes, numbers)), 'fromIndex is guarded');
+  });
 
-  // QUnit.test('include', function(assert) {
-  //   assert.strictEqual(_.include, _.includes, 'is an alias for includes');
-  // });
+  QUnit.test('include', function (assert) {
+    assert.strictEqual(_.include, _.includes, 'is an alias for includes');
+  });
 
-  // QUnit.test('contains', function(assert) {
-  //   assert.strictEqual(_.contains, _.includes, 'is an alias for includes');
+  QUnit.test('contains', function (assert) {
+    assert.strictEqual(_.contains, _.includes, 'is an alias for includes');
 
-  // });
+  });
 
   // QUnit.test('includes with NaN', function(assert) {
   //   assert.strictEqual(_.includes([1, 2, NaN, NaN], NaN), true, 'Expected [1, 2, NaN] to contain NaN');
@@ -540,45 +540,45 @@
   //   assert.deepEqual(_.pluck([{'[object Object]': 1}], {}), [1]);
   // });
 
-  QUnit.test('where', function(assert) {
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    var result = _.where(list, {a: 1});
+  QUnit.test('where', function (assert) {
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];
+    var result = _.where(list, { a: 1 });
     assert.strictEqual(result.length, 3);
     assert.strictEqual(result[result.length - 1].b, 4);
-    result = _.where(list, {b: 2});
+    result = _.where(list, { b: 2 });
     assert.strictEqual(result.length, 2);
     assert.strictEqual(result[0].a, 1);
     result = _.where(list, {});
     assert.strictEqual(result.length, list.length);
 
-    function test() {}
+    function test() { }
     test.map = _.map;
-    assert.deepEqual(_.where([_, {a: 1, b: 2}, _], test), [_, _], 'checks properties given function');
+    assert.deepEqual(_.where([_, { a: 1, b: 2 }, _], test), [_, _], 'checks properties given function');
   });
 
-  QUnit.test('findWhere', function(assert) {
-    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}, {a: 2, b: 4}];
-    var result = _.findWhere(list, {a: 1});
-    assert.deepEqual(result, {a: 1, b: 2});
-    result = _.findWhere(list, {b: 4});
-    assert.deepEqual(result, {a: 1, b: 4});
+  QUnit.test('findWhere', function (assert) {
+    var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }, { a: 2, b: 4 }];
+    var result = _.findWhere(list, { a: 1 });
+    assert.deepEqual(result, { a: 1, b: 2 });
+    result = _.findWhere(list, { b: 4 });
+    assert.deepEqual(result, { a: 1, b: 4 });
 
-    result = _.findWhere(list, {c: 1});
+    result = _.findWhere(list, { c: 1 });
     // assert.ok(_.isUndefined(result), 'undefined when not found');
 
-    result = _.findWhere([], {c: 1});
+    result = _.findWhere([], { c: 1 });
     // assert.ok(_.isUndefined(result), 'undefined when searching empty list');
 
-    function test() {}
+    function test() { }
     test.map = _.map;
-    assert.strictEqual(_.findWhere([_, {a: 1, b: 2}, _], test), _, 'checks properties given function');
+    assert.strictEqual(_.findWhere([_, { a: 1, b: 2 }, _], test), _, 'checks properties given function');
 
     function TestClass() {
       this.y = 5;
       this.x = 'foo';
     }
-    var expect = {c: 1, x: 'foo', y: 5};
-    assert.deepEqual(_.findWhere([{y: 5, b: 6}, expect], new TestClass()), expect, 'uses class instance properties');
+    var expect = { c: 1, x: 'foo', y: 5 };
+    assert.deepEqual(_.findWhere([{ y: 5, b: 6 }, expect], new TestClass()), expect, 'uses class instance properties');
   });
 
   // QUnit.test('max', function(assert) {
@@ -849,14 +849,14 @@
   //   assert.notDeepEqual(partialSampleSorted, _.range(10), 'samples from the whole array, not just the beginning');
   // });
 
-  QUnit.test('toArray', function(assert) {
+  QUnit.test('toArray', function (assert) {
     assert.ok(!_.isArray(arguments), 'arguments object is not an array');
     assert.ok(_.isArray(_.toArray(arguments)), 'arguments object converted into array');
     var a = [1, 2, 3];
     assert.notStrictEqual(_.toArray(a), a, 'array is cloned');
     assert.deepEqual(_.toArray(a), [1, 2, 3], 'cloned array contains same elements');
 
-    var numbers = _.toArray({one: 1, two: 2, three: 3});
+    var numbers = _.toArray({ one: 1, two: 2, three: 3 });
     assert.deepEqual(numbers, [1, 2, 3], 'object flattened into array');
 
     var hearts = '\uD83D\uDC95';

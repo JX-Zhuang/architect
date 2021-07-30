@@ -7,6 +7,7 @@
 //   default as forEach
 // } from './each.js';
 var each = require('./each');
+var contains = require('./contains');
 module.exports = {
   each,
   forEach: each,
@@ -25,5 +26,8 @@ module.exports = {
   every: require('./every'),
   isNumber: require('./isNumber'),
   isObject: require('./isObject'),
-  some: require('./some')
+  some: require('./some'),
+  contains,
+  include: contains,
+  includes: contains
 };

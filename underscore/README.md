@@ -10,7 +10,7 @@
 - [x] reject
 - [x] every
 - [x] some
-- [ ] contains
+- [x] contains
 - [ ] invoke
 - [ ] pluck
 - [ ] max
