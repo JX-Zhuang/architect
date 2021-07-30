@@ -378,31 +378,31 @@
   //   assert.strictEqual(_.all, _.every, 'is an alias for every');
   // });
 
-  // QUnit.test('some', function(assert) {
-  //   assert.ok(!_.some([]), 'the empty set');
-  //   assert.ok(!_.some([false, false, false]), 'all false values');
-  //   assert.ok(_.some([false, false, true]), 'one true value');
-  //   assert.ok(_.some([null, 0, 'yes', false]), 'a string');
-  //   assert.ok(!_.some([null, 0, '', false]), 'falsy values');
-  //   assert.ok(!_.some([1, 11, 29], function(num){ return num % 2 === 0; }), 'all odd numbers');
-  //   assert.ok(_.some([1, 10, 29], function(num){ return num % 2 === 0; }), 'an even number');
-  //   assert.strictEqual(_.some([1], _.identity), true, 'cast to boolean - true');
-  //   assert.strictEqual(_.some([0], _.identity), false, 'cast to boolean - false');
-  //   assert.ok(_.some([false, false, true]));
+  QUnit.test('some', function(assert) {
+    assert.ok(!_.some([]), 'the empty set');
+    assert.ok(!_.some([false, false, false]), 'all false values');
+    assert.ok(_.some([false, false, true]), 'one true value');
+    assert.ok(_.some([null, 0, 'yes', false]), 'a string');
+    assert.ok(!_.some([null, 0, '', false]), 'falsy values');
+    assert.ok(!_.some([1, 11, 29], function(num){ return num % 2 === 0; }), 'all odd numbers');
+    assert.ok(_.some([1, 10, 29], function(num){ return num % 2 === 0; }), 'an even number');
+    assert.strictEqual(_.some([1], _.identity), true, 'cast to boolean - true');
+    assert.strictEqual(_.some([0], _.identity), false, 'cast to boolean - false');
+    assert.ok(_.some([false, false, true]));
 
-  //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-  //   assert.ok(!_.some(list, {a: 5, b: 2}), 'Can be called with object');
-  //   assert.ok(_.some(list, 'a'), 'String mapped to object property');
+    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
+    assert.ok(!_.some(list, {a: 5, b: 2}), 'Can be called with object');
+    assert.ok(_.some(list, 'a'), 'String mapped to object property');
 
-  //   list = [{a: 1, b: 2}, {a: 2, b: 2, c: true}];
-  //   assert.ok(_.some(list, {b: 2}), 'Can be called with object');
-  //   assert.ok(!_.some(list, 'd'), 'String mapped to object property');
+    list = [{a: 1, b: 2}, {a: 2, b: 2, c: true}];
+    assert.ok(_.some(list, {b: 2}), 'Can be called with object');
+    assert.ok(!_.some(list, 'd'), 'String mapped to object property');
 
-  //   assert.ok(_.some({a: '1', b: '2', c: '3', d: '4', e: 6}, _.isNumber), 'takes objects');
-  //   assert.ok(!_.some({a: 1, b: 2, c: 3, d: 4}, _.isObject), 'takes objects');
-  //   assert.ok(_.some(['a', 'b', 'c', 'd'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
-  //   assert.ok(!_.some(['x', 'y', 'z'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
-  // });
+    assert.ok(_.some({a: '1', b: '2', c: '3', d: '4', e: 6}, _.isNumber), 'takes objects');
+    assert.ok(!_.some({a: 1, b: 2, c: 3, d: 4}, _.isObject), 'takes objects');
+    assert.ok(_.some(['a', 'b', 'c', 'd'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
+    assert.ok(!_.some(['x', 'y', 'z'], _.hasOwnProperty, {a: 1, b: 2, c: 3, d: 4}), 'context works');
+  });
 
   // QUnit.test('any', function(assert) {
   //   assert.strictEqual(_.any, _.some, 'is an alias for some');

@@ -24,5 +24,6 @@ module.exports = {
   reject: require('./reject'),
   every: require('./every'),
   isNumber: require('./isNumber'),
-  isObject: require('./isObject')
+  isObject: require('./isObject'),
+  some: require('./some')
 };

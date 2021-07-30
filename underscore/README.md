@@ -9,7 +9,7 @@
 - [x] findWhere
 - [x] reject
 - [x] every
-- [ ] some
+- [x] some
 - [ ] contains
 - [ ] invoke
 - [ ] pluck
