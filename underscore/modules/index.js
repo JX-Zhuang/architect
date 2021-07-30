@@ -21,5 +21,8 @@ module.exports = {
   filter: require('./filter'),
   where: require('./where'),
   findWhere: require('./findWhere'),
-  reject: require('./reject')
+  reject: require('./reject'),
+  every: require('./every'),
+  isNumber: require('./isNumber'),
+  isObject: require('./isObject')
 };

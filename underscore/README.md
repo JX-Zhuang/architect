@@ -8,7 +8,7 @@
 - [x] where
 - [x] findWhere
 - [x] reject
-- [ ] every
+- [x] every
 - [ ] some
 - [ ] contains
 - [ ] invoke
