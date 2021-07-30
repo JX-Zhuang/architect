@@ -7,7 +7,7 @@
 - [x] filter
 - [x] where
 - [x] findWhere
-- [ ] reject
+- [x] reject
 - [ ] every
 - [ ] some
 - [ ] contains

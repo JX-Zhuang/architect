@@ -20,5 +20,6 @@ module.exports = {
   find: require('./find'),
   filter: require('./filter'),
   where: require('./where'),
-  findWhere: require('./findWhere')
+  findWhere: require('./findWhere'),
+  reject: require('./reject')
 };

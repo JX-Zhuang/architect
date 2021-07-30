@@ -329,26 +329,26 @@
   //   assert.strictEqual(_.select, _.filter, 'is an alias for filter');
   // });
 
-  // QUnit.test('reject', function(assert) {
-  //   var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; });
-  //   assert.deepEqual(odds, [1, 3, 5], 'rejected each even number');
+  QUnit.test('reject', function(assert) {
+    var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; });
+    assert.deepEqual(odds, [1, 3, 5], 'rejected each even number');
 
-  //   var context = 'obj';
+    var context = 'obj';
 
-  //   var evens = _.reject([1, 2, 3, 4, 5, 6], function(num){
-  //     assert.strictEqual(context, 'obj');
-  //     return num % 2 !== 0;
-  //   }, context);
-  //   assert.deepEqual(evens, [2, 4, 6], 'rejected each odd number');
+    var evens = _.reject([1, 2, 3, 4, 5, 6], function(num){
+      assert.strictEqual(context, 'obj');
+      return num % 2 !== 0;
+    }, context);
+    assert.deepEqual(evens, [2, 4, 6], 'rejected each odd number');
 
-  //   assert.deepEqual(_.reject([odds, {one: 1, two: 2, three: 3}], 'two'), [odds], 'predicate string map to object properties');
+    assert.deepEqual(_.reject([odds, {one: 1, two: 2, three: 3}], 'two'), [odds], 'predicate string map to object properties');
 
-  //   // Can be used like _.where.
-  //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-  //   assert.deepEqual(_.reject(list, {a: 1}), [{a: 2, b: 2}]);
-  //   assert.deepEqual(_.reject(list, {b: 2}), [{a: 1, b: 3}, {a: 1, b: 4}]);
-  //   assert.deepEqual(_.reject(list, {}), [], 'Returns empty list given empty object');
-  // });
+    // Can be used like _.where.
+    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
+    assert.deepEqual(_.reject(list, {a: 1}), [{a: 2, b: 2}]);
+    assert.deepEqual(_.reject(list, {b: 2}), [{a: 1, b: 3}, {a: 1, b: 4}]);
+    assert.deepEqual(_.reject(list, {}), [], 'Returns empty list given empty object');
+  });
 
   // QUnit.test('every', function(assert) {
   //   assert.ok(_.every([], _.identity), 'the empty set');
