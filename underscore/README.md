@@ -10,7 +10,7 @@
 - [x] reject
 - [x] every
 - [x] some
-- [x] contains
+- [x] contains (内部调用indexOf)
 - [ ] invoke
 - [ ] pluck
 - [ ] max

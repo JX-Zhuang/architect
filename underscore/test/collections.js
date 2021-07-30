@@ -440,18 +440,18 @@
 
   });
 
-  // QUnit.test('includes with NaN', function(assert) {
-  //   assert.strictEqual(_.includes([1, 2, NaN, NaN], NaN), true, 'Expected [1, 2, NaN] to contain NaN');
-  //   assert.strictEqual(_.includes([1, 2, Infinity], NaN), false, 'Expected [1, 2, Infinity] to NOT contain NaN');
-  // });
+  QUnit.test('includes with NaN', function(assert) {
+    assert.strictEqual(_.includes([1, 2, NaN, NaN], NaN), true, 'Expected [1, 2, NaN] to contain NaN');
+    assert.strictEqual(_.includes([1, 2, Infinity], NaN), false, 'Expected [1, 2, Infinity] to NOT contain NaN');
+  });
 
-  // QUnit.test('includes with +- 0', function(assert) {
-  //   _.each([-0, +0], function(val) {
-  //     assert.strictEqual(_.includes([1, 2, val, val], val), true);
-  //     assert.strictEqual(_.includes([1, 2, val, val], -val), true);
-  //     assert.strictEqual(_.includes([-1, 1, 2], -val), false);
-  //   });
-  // });
+  QUnit.test('includes with +- 0', function(assert) {
+    _.each([-0, +0], function(val) {
+      assert.strictEqual(_.includes([1, 2, val, val], val), true);
+      assert.strictEqual(_.includes([1, 2, val, val], -val), true);
+      assert.strictEqual(_.includes([-1, 1, 2], -val), false);
+    });
+  });
 
 
   // QUnit.test('invoke', function(assert) {

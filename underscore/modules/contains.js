@@ -8,6 +8,7 @@ module.exports = function (list, value, fromIndex) {
     for (let i = fromIndex; i < length; i++) {
         const key = _keys ? _keys[i] : i;
         if (list[key] === value) return true;
+        else if (list[key] !== list[key] && value !== value) return true;
     }
     return false;
 }
