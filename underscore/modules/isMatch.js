@@ -1,3 +1,4 @@
+const isObject = require('./isObject');
 const keys = require('./keys');
 module.exports = function (object, properties) {
     const _keys = keys(properties), length = _keys.length;

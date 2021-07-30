@@ -540,21 +540,21 @@
   //   assert.deepEqual(_.pluck([{'[object Object]': 1}], {}), [1]);
   // });
 
-  // QUnit.test('where', function(assert) {
-  //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-  //   var result = _.where(list, {a: 1});
-  //   assert.strictEqual(result.length, 3);
-  //   assert.strictEqual(result[result.length - 1].b, 4);
-  //   result = _.where(list, {b: 2});
-  //   assert.strictEqual(result.length, 2);
-  //   assert.strictEqual(result[0].a, 1);
-  //   result = _.where(list, {});
-  //   assert.strictEqual(result.length, list.length);
+  QUnit.test('where', function(assert) {
+    // var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
+    // var result = _.where(list, {a: 1});
+    // assert.strictEqual(result.length, 3);
+    // assert.strictEqual(result[result.length - 1].b, 4);
+    // result = _.where(list, {b: 2});
+    // assert.strictEqual(result.length, 2);
+    // assert.strictEqual(result[0].a, 1);
+    // result = _.where(list, {});
+    // assert.strictEqual(result.length, list.length);
 
-  //   function test() {}
-  //   test.map = _.map;
-  //   assert.deepEqual(_.where([_, {a: 1, b: 2}, _], test), [_, _], 'checks properties given function');
-  // });
+    function test() {}
+    test.map = _.map;
+    assert.deepEqual(_.where([_, {a: 1, b: 2}, _], test), [_, _], 'checks properties given function');
+  });
 
   // QUnit.test('findWhere', function(assert) {
   //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}, {a: 2, b: 4}];

@@ -1,3 +1,4 @@
 module.exports = function (obj) {
-    return typeof obj === 'object' && !!obj;
+    const type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
 }

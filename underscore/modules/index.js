@@ -18,5 +18,6 @@ module.exports = {
   isArray: require('./isArray'),
   keys:require('./keys'),
   find:require('./find'),
-  filter:require('./filter')
+  filter:require('./filter'),
+  where:require('./where')
 };

@@ -5,7 +5,7 @@
 - [x] reduceRight
 - [x] find
 - [x] filter
-- [ ] where
+- [x] where
 - [ ] findWhere
 - [ ] reject
 - [ ] every
