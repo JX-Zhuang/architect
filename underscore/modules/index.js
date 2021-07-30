@@ -16,8 +16,9 @@ module.exports = {
   reduceRight: require('./reduceRight'),
   toArray: require('./toArray'),
   isArray: require('./isArray'),
-  keys:require('./keys'),
-  find:require('./find'),
-  filter:require('./filter'),
-  where:require('./where')
+  keys: require('./keys'),
+  find: require('./find'),
+  filter: require('./filter'),
+  where: require('./where'),
+  findWhere: require('./findWhere')
 };

@@ -6,7 +6,7 @@
 - [x] find
 - [x] filter
 - [x] where
-- [ ] findWhere
+- [x] findWhere
 - [ ] reject
 - [ ] every
 - [ ] some

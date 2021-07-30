@@ -541,45 +541,45 @@
   // });
 
   QUnit.test('where', function(assert) {
-    // var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
-    // var result = _.where(list, {a: 1});
-    // assert.strictEqual(result.length, 3);
-    // assert.strictEqual(result[result.length - 1].b, 4);
-    // result = _.where(list, {b: 2});
-    // assert.strictEqual(result.length, 2);
-    // assert.strictEqual(result[0].a, 1);
-    // result = _.where(list, {});
-    // assert.strictEqual(result.length, list.length);
+    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}];
+    var result = _.where(list, {a: 1});
+    assert.strictEqual(result.length, 3);
+    assert.strictEqual(result[result.length - 1].b, 4);
+    result = _.where(list, {b: 2});
+    assert.strictEqual(result.length, 2);
+    assert.strictEqual(result[0].a, 1);
+    result = _.where(list, {});
+    assert.strictEqual(result.length, list.length);
 
     function test() {}
     test.map = _.map;
     assert.deepEqual(_.where([_, {a: 1, b: 2}, _], test), [_, _], 'checks properties given function');
   });
 
-  // QUnit.test('findWhere', function(assert) {
-  //   var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}, {a: 2, b: 4}];
-  //   var result = _.findWhere(list, {a: 1});
-  //   assert.deepEqual(result, {a: 1, b: 2});
-  //   result = _.findWhere(list, {b: 4});
-  //   assert.deepEqual(result, {a: 1, b: 4});
+  QUnit.test('findWhere', function(assert) {
+    var list = [{a: 1, b: 2}, {a: 2, b: 2}, {a: 1, b: 3}, {a: 1, b: 4}, {a: 2, b: 4}];
+    var result = _.findWhere(list, {a: 1});
+    assert.deepEqual(result, {a: 1, b: 2});
+    result = _.findWhere(list, {b: 4});
+    assert.deepEqual(result, {a: 1, b: 4});
 
-  //   result = _.findWhere(list, {c: 1});
-  //   assert.ok(_.isUndefined(result), 'undefined when not found');
+    result = _.findWhere(list, {c: 1});
+    // assert.ok(_.isUndefined(result), 'undefined when not found');
 
-  //   result = _.findWhere([], {c: 1});
-  //   assert.ok(_.isUndefined(result), 'undefined when searching empty list');
+    result = _.findWhere([], {c: 1});
+    // assert.ok(_.isUndefined(result), 'undefined when searching empty list');
 
-  //   function test() {}
-  //   test.map = _.map;
-  //   assert.strictEqual(_.findWhere([_, {a: 1, b: 2}, _], test), _, 'checks properties given function');
+    function test() {}
+    test.map = _.map;
+    assert.strictEqual(_.findWhere([_, {a: 1, b: 2}, _], test), _, 'checks properties given function');
 
-  //   function TestClass() {
-  //     this.y = 5;
-  //     this.x = 'foo';
-  //   }
-  //   var expect = {c: 1, x: 'foo', y: 5};
-  //   assert.deepEqual(_.findWhere([{y: 5, b: 6}, expect], new TestClass()), expect, 'uses class instance properties');
-  // });
+    function TestClass() {
+      this.y = 5;
+      this.x = 'foo';
+    }
+    var expect = {c: 1, x: 'foo', y: 5};
+    assert.deepEqual(_.findWhere([{y: 5, b: 6}, expect], new TestClass()), expect, 'uses class instance properties');
+  });
 
   // QUnit.test('max', function(assert) {
   //   assert.strictEqual(_.max(null), -Infinity, 'can handle null/undefined');
