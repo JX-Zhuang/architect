@@ -11,7 +11,7 @@
 - [x] every
 - [x] some
 - [x] contains (内部调用indexOf)
-- [ ] invoke
+- [x] invoke
 - [ ] pluck
 - [ ] max
 - [ ] min
