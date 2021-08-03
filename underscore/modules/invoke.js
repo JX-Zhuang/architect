@@ -10,9 +10,9 @@ function invoke(list, methodName) {
     } else {
         path = isString(methodName) ? methodName.split(',') : methodName;
         contextPath = path.slice(0, -1);
+        path = path[path.length - 1];
     }
     const reset = [].splice.call(arguments, 2);
-    path = path[path.length - 1];
     return map(list, function (context) {
         let method = func;
         if (!method) {

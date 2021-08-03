@@ -507,31 +507,31 @@
   
   });
 
-  // QUnit.test('invoke w/ function reference', function(assert) {
-  //   var list = [[5, 1, 7], [3, 2, 1]];
-  //   var result = _.invoke(list, Array.prototype.sort);
-  //   assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
-  //   assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
+  QUnit.test('invoke w/ function reference', function(assert) {
+    var list = [[5, 1, 7], [3, 2, 1]];
+    var result = _.invoke(list, Array.prototype.sort);
+    assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
+    assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
 
-  //   assert.deepEqual(_.invoke([1, 2, 3], function(a) {
-  //     return a + this;
-  //   }, 5), [6, 7, 8], 'receives params from invoke');
-  // });
+    assert.deepEqual(_.invoke([1, 2, 3], function(a) {
+      return a + this;
+    }, 5), [6, 7, 8], 'receives params from invoke');
+  });
 
   // Relevant when using ClojureScript
-  // QUnit.test('invoke when strings have a call method', function(assert) {
-  //   String.prototype.call = function() {
-  //     return 42;
-  //   };
-  //   var list = [[5, 1, 7], [3, 2, 1]];
-  //   var s = 'foo';
-  //   assert.strictEqual(s.call(), 42, 'call function exists');
-  //   var result = _.invoke(list, 'sort');
-  //   assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
-  //   assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
-  //   delete String.prototype.call;
-  //   assert.strictEqual(s.call, void 0, 'call function removed');
-  // });
+  QUnit.test('invoke when strings have a call method', function(assert) {
+    String.prototype.call = function() {
+      return 42;
+    };
+    var list = [[5, 1, 7], [3, 2, 1]];
+    var s = 'foo';
+    assert.strictEqual(s.call(), 42, 'call function exists');
+    var result = _.invoke(list, 'sort');
+    assert.deepEqual(result[0], [1, 5, 7], 'first array sorted');
+    assert.deepEqual(result[1], [1, 2, 3], 'second array sorted');
+    delete String.prototype.call;
+    assert.strictEqual(s.call, void 0, 'call function removed');
+  });
 
   // QUnit.test('pluck', function(assert) {
   //   var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
