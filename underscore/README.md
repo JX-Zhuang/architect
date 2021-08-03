@@ -12,7 +12,7 @@
 - [x] some
 - [x] contains (内部调用indexOf)
 - [x] invoke
-- [ ] pluck
+- [x] pluck
 - [ ] max
 - [ ] min
 - [ ] sortBy

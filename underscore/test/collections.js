@@ -533,13 +533,13 @@
     assert.strictEqual(s.call, void 0, 'call function removed');
   });
 
-  // QUnit.test('pluck', function(assert) {
-  //   var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
-  //   assert.deepEqual(_.pluck(people, 'name'), ['moe', 'curly'], 'pulls names out of objects');
-  //   assert.deepEqual(_.pluck(people, 'address'), [void 0, void 0], 'missing properties are returned as undefined');
-  //   //compat: most flexible handling of edge cases
-  //   assert.deepEqual(_.pluck([{'[object Object]': 1}], {}), [1]);
-  // });
+  QUnit.test('pluck', function(assert) {
+    var people = [{name: 'moe', age: 30}, {name: 'curly', age: 50}];
+    assert.deepEqual(_.pluck(people, 'name'), ['moe', 'curly'], 'pulls names out of objects');
+    assert.deepEqual(_.pluck(people, 'address'), [void 0, void 0], 'missing properties are returned as undefined');
+    //compat: most flexible handling of edge cases
+    assert.deepEqual(_.pluck([{'[object Object]': 1}], {}), [1]);
+  });
 
   QUnit.test('where', function (assert) {
     var list = [{ a: 1, b: 2 }, { a: 2, b: 2 }, { a: 1, b: 3 }, { a: 1, b: 4 }];

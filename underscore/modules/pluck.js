@@ -1,7 +1,5 @@
 const map = require('./map');
-const deepGet = require('./_deepGet');
+const property = require('./property');
 module.exports = function (list, propertyName) {
-    return map(list, function (item) {
-        return deepGet(list, propertyName);
-    })
+    return map(list, property(propertyName))
 };
