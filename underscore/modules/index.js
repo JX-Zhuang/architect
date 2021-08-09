@@ -32,5 +32,7 @@ module.exports = {
   includes: contains,
   invoke: require('./invoke'),
   constant: require('./constant'),
-  pluck: require('./pluck')
+  pluck: require('./pluck'),
+  max:require('./max'),
+  range:require('./range')
 };

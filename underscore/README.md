@@ -13,7 +13,7 @@
 - [x] contains (内部调用indexOf)
 - [x] invoke
 - [x] pluck
-- [ ] max
+- [x] max
 - [ ] min
 - [ ] sortBy
 - [ ] groupBy
@@ -45,7 +45,7 @@
 - [ ] sortedIndex
 - [ ] findIndex
 - [ ] findLastIndex
-- [ ] range
+- [x] range
 
 ### Functions
 - [ ] bind

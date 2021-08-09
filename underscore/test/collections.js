@@ -582,50 +582,49 @@
     assert.deepEqual(_.findWhere([{ y: 5, b: 6 }, expect], new TestClass()), expect, 'uses class instance properties');
   });
 
-  // QUnit.test('max', function(assert) {
-  //   assert.strictEqual(_.max(null), -Infinity, 'can handle null/undefined');
-  //   assert.strictEqual(_.max(void 0), -Infinity, 'can handle null/undefined');
-  //   assert.strictEqual(_.max(null, _.identity), -Infinity, 'can handle null/undefined');
+  QUnit.test('max', function(assert) {
+    assert.strictEqual(_.max(null), -Infinity, 'can handle null/undefined');
+    assert.strictEqual(_.max(void 0), -Infinity, 'can handle null/undefined');
+    assert.strictEqual(_.max(null, _.identity), -Infinity, 'can handle null/undefined');
 
-  //   assert.strictEqual(_.max([1, 2, 3]), 3, 'can perform a regular Math.max');
+    assert.strictEqual(_.max([1, 2, 3]), 3, 'can perform a regular Math.max');
 
-  //   var neg = _.max([1, 2, 3], function(num){ return -num; });
-  //   assert.strictEqual(neg, 1, 'can perform a computation-based max');
+    var neg = _.max([1, 2, 3], function(num){ return -num; });
+    assert.strictEqual(neg, 1, 'can perform a computation-based max');
+    assert.strictEqual(_.max({}), -Infinity, 'Maximum value of an empty object');
+    assert.strictEqual(_.max([]), -Infinity, 'Maximum value of an empty array');
+    assert.strictEqual(_.max({a: 'a'}), -Infinity, 'Maximum value of a non-numeric collection');
 
-  //   assert.strictEqual(_.max({}), -Infinity, 'Maximum value of an empty object');
-  //   assert.strictEqual(_.max([]), -Infinity, 'Maximum value of an empty array');
-  //   assert.strictEqual(_.max({a: 'a'}), -Infinity, 'Maximum value of a non-numeric collection');
+    assert.strictEqual(_.max(_.range(1, 300000)), 299999, 'Maximum value of a too-big array');
 
-  //   assert.strictEqual(_.max(_.range(1, 300000)), 299999, 'Maximum value of a too-big array');
+    assert.strictEqual(_.max([1, 2, 3, 'test']), 3, 'Finds correct max in array starting with num and containing a NaN');
+    assert.strictEqual(_.max(['test', 1, 2, 3]), 3, 'Finds correct max in array starting with NaN');
 
-  //   assert.strictEqual(_.max([1, 2, 3, 'test']), 3, 'Finds correct max in array starting with num and containing a NaN');
-  //   assert.strictEqual(_.max(['test', 1, 2, 3]), 3, 'Finds correct max in array starting with NaN');
+    assert.strictEqual(_.max([1, 2, 3, null]), 3, 'Finds correct max in array starting with num and containing a `null`');
+    assert.strictEqual(_.max([null, 1, 2, 3]), 3, 'Finds correct max in array starting with a `null`');
 
-  //   assert.strictEqual(_.max([1, 2, 3, null]), 3, 'Finds correct max in array starting with num and containing a `null`');
-  //   assert.strictEqual(_.max([null, 1, 2, 3]), 3, 'Finds correct max in array starting with a `null`');
+    assert.strictEqual(_.max([1, 2, 3, '']), 3, 'Finds correct max in array starting with num and containing an empty string');
+    assert.strictEqual(_.max(['', 1, 2, 3]), 3, 'Finds correct max in array starting with an empty string');
 
-  //   assert.strictEqual(_.max([1, 2, 3, '']), 3, 'Finds correct max in array starting with num and containing an empty string');
-  //   assert.strictEqual(_.max(['', 1, 2, 3]), 3, 'Finds correct max in array starting with an empty string');
+    assert.strictEqual(_.max([1, 2, 3, false]), 3, 'Finds correct max in array starting with num and containing a false');
+    assert.strictEqual(_.max([false, 1, 2, 3]), 3, 'Finds correct max in array starting with a false');
 
-  //   assert.strictEqual(_.max([1, 2, 3, false]), 3, 'Finds correct max in array starting with num and containing a false');
-  //   assert.strictEqual(_.max([false, 1, 2, 3]), 3, 'Finds correct max in array starting with a false');
+    assert.strictEqual(_.max([0, 1, 2, 3, 4]), 4, 'Finds correct max in array containing a zero');
+    assert.strictEqual(_.max([-3, -2, -1, 0]), 0, 'Finds correct max in array containing negative numbers');
 
-  //   assert.strictEqual(_.max([0, 1, 2, 3, 4]), 4, 'Finds correct max in array containing a zero');
-  //   assert.strictEqual(_.max([-3, -2, -1, 0]), 0, 'Finds correct max in array containing negative numbers');
+    assert.deepEqual(_.map([[1, 2, 3], [4, 5, 6]], _.max), [3, 6], 'Finds correct max in array when mapping through multiple arrays');
 
-  //   assert.deepEqual(_.map([[1, 2, 3], [4, 5, 6]], _.max), [3, 6], 'Finds correct max in array when mapping through multiple arrays');
+    var a = {x: -Infinity};
+    var b = {x: -Infinity};
+    var iterator = function(o){ return o.x; };
+    assert.strictEqual(_.max([a, b], iterator), a, 'Respects iterator return value of -Infinity');
 
-  //   var a = {x: -Infinity};
-  //   var b = {x: -Infinity};
-  //   var iterator = function(o){ return o.x; };
-  //   assert.strictEqual(_.max([a, b], iterator), a, 'Respects iterator return value of -Infinity');
+    assert.deepEqual(_.max([{a: 1}, {a: 0, b: 3}, {a: 4}, {a: 2}], 'a'), {a: 4}, 'String keys use property iterator');
 
-  //   assert.deepEqual(_.max([{a: 1}, {a: 0, b: 3}, {a: 4}, {a: 2}], 'a'), {a: 4}, 'String keys use property iterator');
-
-  //   assert.deepEqual(_.max([0, 2], function(c){ return c * this.x; }, {x: 1}), 2, 'Iterator context');
-  //   assert.deepEqual(_.max([[1], [2, 3], [-1, 4], [5]], 0), [5], 'Lookup falsy iterator');
-  //   assert.deepEqual(_.max([{0: 1}, {0: 2}, {0: -1}, {a: 1}], 0), {0: 2}, 'Lookup falsy iterator');
-  // });
+    assert.deepEqual(_.max([0, 2], function(c){ return c * this.x; }, {x: 1}), 2, 'Iterator context');
+    assert.deepEqual(_.max([[1], [2, 3], [-1, 4], [5]], 0), [5], 'Lookup falsy iterator');
+    assert.deepEqual(_.max([{0: 1}, {0: 2}, {0: -1}, {a: 1}], 0), {0: 2}, 'Lookup falsy iterator');
+  });
 
   // QUnit.test('min', function(assert) {
   //   assert.strictEqual(_.min(null), Infinity, 'can handle null/undefined');
