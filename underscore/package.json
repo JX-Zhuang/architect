@@ -16,7 +16,7 @@
     "pretty-bytes-cli": "^1.0.0",
     "qunit": "^2.10.0",
     "rollup": "^2.40.0",
-    "terser": "^4.6.13"
+    "terser": "^4.8.1"
   },
   "scripts": {
     "test:collections":"qunit test/collections.js",
