@@ -9,7 +9,7 @@
     "eslint-plugin-import": "^2.20.1",
     "glob": "^7.1.6",
     "gzip-size-cli": "^1.0.0",
-    "karma": "^0.13.13",
+    "karma": "^6.4.1",
     "karma-qunit": "~2.0.1",
     "karma-sauce-launcher": "^1.2.0",
     "nyc": "^2.1.3",
